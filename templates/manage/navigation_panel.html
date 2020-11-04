@@ -1,0 +1,160 @@
+{% load static %}
+<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar>
+
+                    <a href="{% url 'dev_manage_index' %}" class="sidebar-brand">
+                        <img class="sidebar-brand-icon" src="{% static 'manage/assets/images/logo/igt_logo.png' %}" alt="IGT">
+                        <span><img class="brand-icon" src="{% static 'manage/assets/images/logo/igthomelogo.png' %}" width="130px" height="32px" alt="IGT"></span>
+                    </a>
+
+
+                    <div class="sidebar-account mx-16pt mb-16pt dropdown">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <img width="32" height="32" class="rounded-circle mr-8pt" src="{% static 'manage/assets/images/people/50/guy-3.jpg' %}" alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="text-black-100">Elliot Jones</span>
+                                <small class="text-black-50">IGT Admin</small>
+                            </span>
+                            <i class="material-icons text-black-20 icon-16pt">keyboard_arrow_down</i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-full dropdown-menu-caret-center">
+                            <div class="dropdown-header"><strong><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>ACCOUNT</strong></div>
+                            <a class="dropdown-item" href="edit_account.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">edit</span>Edit Account</a>
+                            <a class="dropdown-item" href="billing.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">money</span>Billing</a>
+                            <a class="dropdown-item" href="payment_history.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">payment</span>Payments</a>
+                            <a class="dropdown-item" href="logout.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">exit_to_app</span>Logout</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="sidebar-heading">Overview</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="{% url 'dev_manage_index' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#acctmgt">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">contacts</span>
+                                Account Mgt
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="acctmgt">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="{% url 'dev_manage_users' %}">
+                                        <span class="fa fa-users sidebar-menu-icon sidebar-menu-icon--left"></span>
+                                        <span class="sidebar-menu-text">Users</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="{% url 'dev_manage_staffs' %}">
+                                        <span class="fa fa-users-cog sidebar-menu-icon sidebar-menu-icon--left"></span>
+                                        <span class="sidebar-menu-text">Staffs</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#campaign_mgt">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                Campaign Mgt
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="campaign_mgt">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mycampaigns.html">
+                                        <span class="fa fa-bullhorn sidebar-menu-icon sidebar-menu-icon--left"></span>
+                                        <span class="sidebar-menu-text">Campaigns</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="rewardcontacts.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">contacts</span>
+                                        <span class="sidebar-menu-text">Rewards</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="reports.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">details</span>
+                                        <span class="sidebar-menu-text">Reports</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#settings">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">settings</span>
+                                Settings
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="settings">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="api_config.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">code</span>
+                                        <span class="sidebar-menu-text">API Gateways</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="notifications.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">notifications</span>
+                                        <span class="sidebar-menu-text"> Notifications</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="localization.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">local_activity</span>
+                                        <span class="sidebar-menu-text">Localization</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="logs.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">local_library</span>
+                                        <span class="sidebar-menu-text">System Logs</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="payments.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">payment</span>
+                                <span class="sidebar-menu-text">Payments</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#messaging_menu">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span>
+                                Messaging
+                                <span class="sidebar-menu-badge badge badge-accent badge-notifications ml-auto">2</span>
+                                <span class="sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="messaging_menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="msg.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">chat</span>
+                                        <span class="sidebar-menu-text">Chat</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="emailing.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">email</span>
+                                        <span class="sidebar-menu-text">Email</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="faq.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
+                                <span class="sidebar-menu-text">FAQ</span>
+                            </a>
+                        </li>
+                        <div class="sidebar-heading"><small class="text-black-50">Pin:  5423</small></div>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>

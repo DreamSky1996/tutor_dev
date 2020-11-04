@@ -1,0 +1,556 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Administration | Campaign Details!</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'manage/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'manage/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'manage/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'manage/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'manage/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dropzone -->
+    <link type="text/css" href="{% static 'manage/assets/css/dropzone.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/dropzone.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'manage/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/jqvmap/jqvmap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr-airbnb.rtl.css' %}" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/daterangepicker.css' %}" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="{% static 'manage/assets/css/quill.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/quill.rtl.css' %}" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="{% static 'manage/assets/css/bootstrap-touchspin.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/bootstrap-touchspin.rtl.css' %}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="{% static 'manage/assets/css/select2.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/select2.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/vendor/select2/select2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_manage_index' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'manage/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IGT Administration & Management</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Naira</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select Currency</strong></div>
+                            <a class="dropdown-item active" href="">Naira</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons icon-24pt">mail_outline</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">Clients loved the new design.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">🔥 Superb job..</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+                <div class="dropdown border-left-2 navbar-border">
+                    <button class="navbar-toggler navbar-toggler-custom d-block" type="button" data-toggle="dropdown" data-caret="false">
+                        <span class="material-icons">business_center</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>Account Type</strong></div>
+                        <a href="" class="dropdown-item active d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-primary">CC</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Brands</strong>
+                                    <span class="text-black-50">Manufacturing</span>
+                                </span>
+                            </small>
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+
+
+            <div class="border-bottom-2 py-32pt position-relative z-1">
+                <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+
+                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">Campaigns!</h2>
+
+
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="{% url 'dev_manage_index' %}">Home</a></li>
+
+                                <li class="breadcrumb-item">
+
+                                    <a href="discover.html">Campaign Mgt</a>
+
+                                </li>
+
+                                <li class="breadcrumb-item active">
+
+                                   Campaign Details
+
+                                </li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--  ####### Page content ######   -->
+            <nav class="navbar navbar-expand-sm navbar-list border-bottom-2  py-sm-16pt">
+                <div class="container-fluid page__container">
+                    <ul class="nav navbar-nav w-100">
+                        <li class="nav-item navbar-list__item py-16pt py-sm-0">
+                            <a href="" class="nav-link" onclick="window.history.go(-1); return false;"><i class="material-icons icon--left">keyboard_backspace</i> Back to My Campaigns</a>
+                        </li>
+                        <li class="nav-item navbar-list__item py-16pt py-sm-0">
+                            <div class="media">
+                                <div class="media-left mr-16pt">
+                                    <a href=""><img src="{% static 'manage/assets/images/paths/angular_64x64.png' %}" width="40" alt="Angular" class="rounded"></a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="" class="card-title text-body mb-0">CornFlakes Advert</a>
+                                    <p class="lh-1 d-flex align-items-center mb-0">
+                                        <span class="text-50 small font-weight-bold mr-8pt">Elijah Murray</span>
+                                        <span class="text-50 small">Head of Marketing</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item navbar-list__item py-16pt py-sm-0">
+                            <div class="row" role="tablist">
+                                <div class="col-auto d-flex flex-column">
+                                    <h6 class="m-0"><img src="{% static 'manage/assets/images/icon/nairalogo.png' %}" alt="n" class="flex">&nbsp; 4,56,435.00</h6>
+                                    <p class="text-50 mb-0 d-flex align-items-center">
+                                        Budgets
+                                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="page-section bg-alt border-bottom-2">
+                <div class="container-fluid page__container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-md-6 mb-24pt mb-lg-0">
+                                    <p class="text-70 mb-0"><strong>Campaign Name</strong></p>
+                                    <h3>Peak Milk</h3>
+                                    <p class="text-70 mb-0"><strong>Sponsor</strong></p>
+                                    <p class="text-50">Kate EJiofor -Manager</p>
+                                    <p class="text-70 mb-0"><strong>Type</strong>&nbsp; creators/Influencer</p>
+                                    <p class="text-70 mb-0"><strong>Age</strong>&nbsp; 18+</p>
+                                    <p class="text-70 mb-0"><strong>No.# of Trenders</strong>&nbsp; 200</p>
+                                    <p class="text-70 mb-0"><strong>Category</strong>&nbsp; General, Gym, fitness</p>
+                                    <p class="text-70 mb-0"><strong>Content</strong>&nbsp; Photography, Videography</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-70 mb-0"><strong>Platform</strong></p>
+                                    <p>
+                                        <img src="{% static 'manage/assets/images/icon/facebook.png' %}" alt="FB" class="" width="18" height="18">
+                                        <img src="{% static 'manage/assets/images/icon/instagram.png' %}" alt="Insta" class="" width="18" height="18">
+                                        <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" alt="Tiktok" class="" width="18" height="18">
+                                    </p>
+                                    <p class="text-70 mb-0"><strong>Mode:</strong> &nbsp; Public</p>
+                                    <p class="text-70 mb-0"><strong>Status:</strong> &nbsp; Active</p>
+                                    <p class="text-70 mb-0"><strong>Start</strong>&nbsp; 19/02/2019</p>
+                                    <p class="text-70 mb-0"><strong>Deadline</strong>&nbsp; 19/02/2019</p>
+                                    <p class="text-70 mb-0"><strong>Duration</strong>&nbsp; 3 post(s) / 3 week(s)</p>
+                                    <p class="text-70 mb-0"><strong>Photos / Videos url</strong>&nbsp; https://www.dropbox.com/files/34ffjdiref9e</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card">
+                                <img src="{% static 'manage/assets/images/stories/256_rsz_euan-carmichael-666378-unsplash.jpg' %}" alt="" class="card-img" height="175px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid page__container">
+                <form action="edit-account.html">
+                    <div class="row">
+                        <div class="col-lg-9 pr-lg-0">
+
+                            <div class="page-section">
+                                <h4>Campaign Brief</h4>
+
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                        <a href="" class="avatar avatar-32pt avatar-online mr-12pt">
+                                            <img src="{% static 'manage/assets/images/people/256/256_rsz_nicolas-horn-689011-unsplash.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                        </a>
+                                        <div class="flex">
+                                            <p class="d-flex align-items-center mb-2">
+                                                <a href="" class="text-body mr-2"><strong>Brand Description</strong></a>
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?</p>
+
+                                            <a href="" class="d-flex align-items-center border-1 rounded mb-0 p-8pt">
+                                                <span class="mr-8pt p-8pt bg-secondary rounded" style="width: 40px; height: 40px;">
+                                                    <i class="material-icons icon-24pt text-white">file_download</i>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <span class="text-100">Lipton_pics.png</span>
+                                                    <span class="text-50 lh-1">1.3 Mb</span>
+                                                </span>
+                                                <span class="text-70 text-underline mr-8pt">download</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Post Caption/Text </div>
+                                </div>
+
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                    
+                                        <div class="flex">
+                                             <p class="d-flex align-items-center mb-2">
+                                            <small class="form-text text-muted">You must us this text exactly as it is in you post.</small>
+                                            </p>
+                                            <p>ADS: &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Handle(s) /Hash tags </div>
+                                </div>
+
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                    
+                                        <div class="flex">
+                                             <p class="d-flex align-items-center mb-2">
+                                            <small class="form-text text-muted">You must incorporate the text below in your post.</small>
+                                            </p>
+                                            <p><strong>Hashtags</strong>&nbsp; #followyou, #myliptontea</p>
+                                            <p>@macys, @hennessy, @DominosCEO</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Do's</div>
+                                </div>
+
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                       
+                                        <div class="flex">
+                                            
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Dont's</div>
+                                </div>
+
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                       
+                                        <div class="flex">
+                                            
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 page-nav">
+                            <div class="page-section pt-lg-112pt">
+                                <nav class="nav page-nav__menu">
+                                    <a class="nav-link" href="mycampaigns.html">
+                                        <button type="button" class="btn btn-accent">
+                                          <i class="material-icons icon--left">arrow_back_ios   </i> Back
+                                        </button>
+                                    </a>
+                                    <a class="nav-link" href="#">
+                                        <button type="button" class="btn btn-accent">
+                                          <i class="material-icons icon--left">edit   </i> Edit
+                                        </button>
+                                    </a>
+                                    <a class="nav-link" href="#">
+                                        <button type="button" class="btn btn-danger">
+                                          <i class="material-icons icon--left">delete_forever   </i> Delete
+                                        </button>
+                                    </a>
+                                    
+                                </nav>
+
+                                <!-- <div class="page-nav__content">
+                                 <button type="submit" class="btn btn-accent">Save changes</button>
+                                 </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--  ####### Page content end  ######   -->
+
+            <!-- footer include -->
+            {% include 'manage/footer_include.html' %}
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+        <!-- drawer -->
+        {% include 'manage/navigation_panel.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    {% include 'manage/js_attachments.html' %}
+    <!-- Chart.js Samples -->
+    <script src="{% static 'manage/assets/js/page.tasks-board.js' %}"></script>
+    <!-- JS settings and attachments  -->
+</body>
+
+</html>

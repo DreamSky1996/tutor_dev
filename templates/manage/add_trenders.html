@@ -1,0 +1,1215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Administration | Create Campaign - Add Influencer</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'manage/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'manage/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'manage/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'manage/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'manage/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'manage/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/jqvmap/jqvmap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/flatpickr-airbnb.rtl.css' %}" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/daterangepicker.css' %}" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="{% static 'manage/assets/css/quill.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/quill.rtl.css' %}" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="{% static 'manage/assets/css/bootstrap-touchspin.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/bootstrap-touchspin.rtl.css' %}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="{% static 'manage/assets/css/select2.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/select2.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/vendor/select2/select2.min.css' %}" rel="stylesheet">
+
+    <!-- ion Range Slider -->
+    <link type="text/css" href="{% static 'manage/assets/css/ion-rangeslider.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/ion-rangeslider.rtl.css' %}" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="{% static 'manage/assets/css/bootstrap-touchspin.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/bootstrap-touchspin.rtl.css' %}" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{% static 'manage/assets/css/sweetalert.css' %}">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_manage_index' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'manage/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IGT Administration & Management</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Naira</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select Currency</strong></div>
+                            <a class="dropdown-item active" href="">Naira</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons icon-24pt">mail_outline</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">Clients loved the new design.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">🔥 Superb job..</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+                <div class="dropdown border-left-2 navbar-border">
+                    <button class="navbar-toggler navbar-toggler-custom d-block" type="button" data-toggle="dropdown" data-caret="false">
+                        <span class="material-icons">business_center</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>Account Type</strong></div>
+                        <a href="" class="dropdown-item active d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-primary">B</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Brands</strong>
+                                    <span class="text-black-50">Manufacturing</span>
+                                </span>
+                            </small>
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+
+
+            <div class="py-32pt navbar-submenu">
+                <div class="container-fluid page__container">
+                    <div class="progression-bar progression-bar--active-accent">
+                        <a href="create_campaign_influencer.html" class="progression-bar__item progression-bar__item--complete">
+                            <span class="progression-bar__item-content">
+                                <i class="material-icons progression-bar__item-icon">done</i>
+                                <span class="progression-bar__item-text h5 mb-0 text-uppercase">Campaign Info</span>
+                            </span>
+                        </a>
+                        <a href="campaign_brief.html" class="progression-bar__item progression-bar__item--complete">
+                            <span class="progression-bar__item-content">
+                                <i class="material-icons progression-bar__item-icon">done</i>
+                                <span class="progression-bar__item-text h5 mb-0 text-uppercase">Campaign Brief</span>
+                            </span>
+                        </a>
+                        <a href="add_trenders.html" class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
+                            <span class="progression-bar__item-content">
+                                <i class="material-icons progression-bar__item-icon">edit</i>
+                                <span class="progression-bar__item-text h5 mb-0 text-uppercase">Add Trenders</span>
+                            </span>
+                        </a>
+                        <a href="#" class="progression-bar__item">
+                            <span class="progression-bar__item-content">
+                                <i class="material-icons progression-bar__item-icon"></i>
+                                <span class="progression-bar__item-text h5 mb-0 text-uppercase">Payment & Review </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  ####### Page content ######   -->
+            <div class="container-fluid page__container page-section">
+
+                <div class="row mb-lg-8pt">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-group-row__card">
+                            <div class="card-body d-flex flex-row align-items-center">
+                                <div class="flex">
+                                    <p class="d-flex align-items-center mb-0">
+                                        <strong>Trenders Selected</strong>
+                                    </p>
+                                    <span class="h4 m-0">
+                                        24,000 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-accent" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                    <div class="card card-group-row__card">
+                            <div class="card-body d-flex flex-row align-items-center">
+                                <div class="flex">
+                                    <p class="d-flex align-items-center mb-0">
+                                        <strong>Social Reach</strong>
+                                    </p>
+                                    <span class="h4 m-0">
+                                        2.4M 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-accent" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                    <div class="card card-group-row__card">
+                            <div class="card-body d-flex flex-row align-items-center">
+                                <div class="flex">
+                                    <p class="d-flex align-items-center mb-0">
+                                        <strong>Total Engagement</strong>
+                                    </p>
+                                    <span class="h4 m-0">
+                                        24K
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-accent" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-group-row__card">
+                            <div class="card-body d-flex flex-row align-items-center">
+                                <div class="flex">
+                                    <p class="d-flex align-items-center mb-0">
+                                        <strong>Estimated Budget</strong>
+                                    </p>
+                                    <span class="h4 m-0">
+                                        2,254,000 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar bg-accent" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-separator">
+                    <div class="page-separator__text">Add Trenders to Campaign</div>
+                </div>
+
+                <div class="form-group">
+                    <h6>Campaign Mode:</h6>
+                    <div class="form-group form-check-inline">
+                        <input class="form-check-input" type="radio" name="campaignmode" id="publiccamp" value="publiccamp" checked="">
+                    <label class="form-check-label" for="publiccamp">Make Campaign Public &nbsp; </label>
+                    <small class="text-50">(You don't need to manually add trenders)</small>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="campaignmode" id="privatecamp" value="privatecamp">
+                        <label class="form-check-label" for="privatecamp">Make Campaign Private &nbsp;</label>
+                        <small class="text-50">(You must manually add trenders)</small>
+                    </div>
+                </div> 
+
+                <h6>Filter / Criteria:</h6>
+                <div class="card card-form d-flex flex-column flex-sm-row mb-lg-32pt">
+                    <div class="card-form__body card-body-form-group flex">
+                        <div class="row">
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <input id="filter_name" type="text" class="form-control" placeholder="  Name/IGT ID" style="width: 150px">
+                                </div>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <label for="filter_level">Levels</label>
+                                    <select id="filter_level" class="custom-select" style="width: 110px;">
+                                        <option value="all">All Levels</option>
+                                        <option value="nano">Nano</option>
+                                        <option value="micro">Micro</option>
+                                        <option value="midtier">Mid-Tier</option>
+                                        <option value="macro">Macro</option>
+                                        <option value="mega">Mega</option>
+                                        <option value="Elite">Celebrity</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <label for="filter_sex">Sex</label>
+                                    
+                                    <select id="filter_sex" class="custom-select" style="width: 95px;">
+                                        <option value="both">Both</option>
+                                        <option value="m">Male</option>
+                                        <option value="f">Female</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <label for="filter_state">State</label>
+                                    
+                                    <select id="filter_state" class="custom-select" style="width: 100px;">
+                                        <option value="any">Any</option>
+                                        <option value="lagos">Lagos</option>
+                                        <option value="abuja">Abuja</option>
+                                        <option value="cr">Cross River</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <label for="filter_country">Country</label>
+                                    
+                                    <select id="filter_coutry" class="custom-select" style="width: 100px;">
+                                        <option value="NG">Nigeria</option>
+                                        <option value="GH">Ghana</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn bg-alt border-left border-top border-top-sm-0 rounded-0"><i class="material-icons text-primary icon-20pt">check</i></button>
+                </div>
+
+                <!-- ########## Trenders List box  ########## -->
+                <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="page-separator">
+                                <div class="page-separator__text">Verified</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    
+
+                                    <div class="card mb-md-0 border-accent">
+                                        <div class="card-header pb-0 border-0 d-flex justify-content-center" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+                                            <div class="avatar avatar-lg text-center">
+                                                <img src="{% static 'manage/assets/images/people/256/265_rsz_mubariz-mehdizadeh-364026-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle text-center">
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-50 mb-16pt justify-content-center">
+                                                <div class="flex d-flex flex-column text-center">
+                                                    <h6 class="card-title m-0">Christopher Wallace</h6><div class="page-separator"></div>
+                                                    <small class="m-0">&nbsp;IGT:  @Iambigfish</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">verified_user</i><strong>Creator</strong>&nbsp;(Nano)</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">location_on</i> <strong>Lagos, NG</strong></small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">person</i> <strong>36</strong>&nbsp; / 4<i class="material-icons text-accent ml-4pt icon-16pt">star</i></small>
+                                                </div>
+
+                                                <div class="text-muted flex text-center">
+                                                    <span class="text-50 badge badge-light">Skit Creation</span>
+                                                </div>
+
+                                                <div>
+                                                <p class="text-center">
+                                                    <img src="{% static 'manage/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                    <img src="{% static 'manage/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                    <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                    <img src="{% static 'manage/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                    <img src="{% static 'manage/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                    <img src="{% static 'manage/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                                </p>
+                                                </div>
+
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" href="#modalCenter">
+                                                    <i class="fa fa-eye icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Good job!" data-swal-text="Trender Added to Campaign!" data-swal-type="success">
+                                                    <i class="fa fa-user-plus icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Removed" data-swal-text="Trender Removed from Campaign!" data-swal-type="error">
+                                                    <i class="fa fa-user-minus icon--center"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    
+
+                                    <div class="card mb-md-0 border-accent">
+                                        <div class="card-header pb-0 border-0 d-flex justify-content-center" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+                                            <div class="avatar avatar-lg text-center">
+                                                <img src="{% static 'manage/assets/images/people/256/256_rsz_florian-perennes-594195-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle text-center">
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-50 mb-16pt justify-content-center">
+                                                <div class="flex d-flex flex-column text-center">
+                                                    <h6 class="card-title m-0">Christopher Wallace</h6><div class="page-separator"></div>
+                                                    <small class="m-0">&nbsp;IGT:  @Iambigfish</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">verified_user</i><strong>Influencer</strong>&nbsp;(Micro)</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">location_on</i> <strong>Lagos, NG</strong></small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">person</i> <strong>36</strong>&nbsp; / 4<i class="material-icons text-accent ml-4pt icon-16pt">star</i></small>
+                                                </div>
+
+                                                <div class="text-muted flex text-center">
+                                                    <span class="text-50 badge badge-light">Lifestyle</span>
+                                                    <span class="text-50 badge badge-light">Fitness</span>
+                                                    <span class="text-50 badge badge-light">Gym</span>
+                                                </div>
+
+                                                <div>
+                                                <p class="text-center">
+                                                    <img src="{% static 'manage/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                    <img src="{% static 'manage/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                    <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                    <img src="{% static 'manage/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                    <img src="{% static 'manage/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                    <img src="{% static 'manage/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                                </p>
+                                                </div>
+
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" href="#modalCenter">
+                                                    <i class="fa fa-eye icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Good job!" data-swal-text="Trender Added to Campaign!" data-swal-type="success">
+                                                    <i class="fa fa-user-plus icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Removed" data-swal-text="Trender Removed from Campaign!" data-swal-type="error">
+                                                    <i class="fa fa-user-minus icon--center"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="page-separator">
+                                <div class="page-separator__text">Trenders</div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-md-6">
+                                    
+
+                                    <div class="card mb-md-0 border-accent">
+                                        <div class="card-header pb-0 border-0 d-flex justify-content-center" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+                                            <div class="avatar avatar-lg text-center">
+                                                <img src="{% static 'manage/assets/images/people/256/256_rsz_sharina-mae-agellon-377466-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle text-center">
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-50 mb-16pt justify-content-center">
+                                                <div class="flex d-flex flex-column text-center">
+                                                    <h6 class="card-title m-0">Christopher Wallace</h6><div class="page-separator"></div>
+                                                    <small class="m-0">&nbsp;IGT:  @Iambigfish</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">verified_user</i><strong>Influencer</strong>&nbsp;(Micro)</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">location_on</i> <strong>Lagos, NG</strong></small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">person</i> <strong>36</strong>&nbsp; / 4<i class="material-icons text-accent ml-4pt icon-16pt">star</i></small>
+                                                </div>
+
+                                                <div class="text-muted flex text-center">
+                                                    <span class="text-50 badge badge-light">Lifestyle</span>
+                                                    <span class="text-50 badge badge-light">Fitness</span>
+                                                    <span class="text-50 badge badge-light">Gym</span>
+                                                </div>
+
+                                                <div>
+                                                <p class="text-center">
+                                                    <img src="{% static 'manage/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                    <img src="{% static 'manage/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                    <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                    <img src="{% static 'manage/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                    <img src="{% static 'manage/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                    <img src="{% static 'manage/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                                </p>
+                                                </div>
+
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" href="#modalCenter">
+                                                    <i class="fa fa-eye icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Good job!" data-swal-text="Trender Added to Campaign!" data-swal-type="success">
+                                                    <i class="fa fa-user-plus icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Removed" data-swal-text="Trender Removed from Campaign!" data-swal-type="error">
+                                                    <i class="fa fa-user-minus icon--center"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    
+
+                                    <div class="card mb-md-0 border-accent">
+                                        <div class="card-header pb-0 border-0 d-flex justify-content-center" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+                                            <div class="avatar avatar-lg text-center">
+                                                <img src="{% static 'manage/assets/images/people/256/256_rsz_nicolas-horn-689011-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle text-center">
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-50 mb-16pt justify-content-center">
+                                                <div class="flex d-flex flex-column text-center">
+                                                    <h6 class="card-title m-0">Christopher Wallace</h6><div class="page-separator"></div>
+                                                    <small class="m-0">&nbsp;IGT:  @Iambigfish</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">verified_user</i><strong>Influencer</strong>&nbsp;(Micro)</small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">location_on</i> <strong>Lagos, NG</strong></small>
+                                                    <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">person</i> <strong>36</strong>&nbsp; / 4<i class="material-icons text-accent ml-4pt icon-16pt">star</i></small>
+                                                </div>
+
+                                                <div class="text-muted flex text-center">
+                                                    <span class="text-50 badge badge-light">Lifestyle</span>
+                                                    <span class="text-50 badge badge-light">Fitness</span>
+                                                    <span class="text-50 badge badge-light">Gym</span>
+                                                </div>
+
+                                                <div>
+                                                <p class="text-center">
+                                                    <img src="{% static 'manage/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                    <img src="{% static 'manage/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                    <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                    <img src="{% static 'manage/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                    <img src="{% static 'manage/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                    <img src="{% static 'manage/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                                </p>
+                                                </div>
+
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" href="#modalCenter">
+                                                    <i class="fa fa-eye icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Good job!" data-swal-text="Trender Added to Campaign!" data-swal-type="success">
+                                                    <i class="fa fa-user-plus icon--center"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Removed" data-swal-text="Trender Removed from Campaign!" data-swal-type="error">
+                                                    <i class="fa fa-user-minus icon--center"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div> <br>
+                <!-- ########## End of Trenders List box  ########  -->
+
+                <div class="card-group border-left-4 border-left-accent mb-32pt">
+                    <div class="card">
+                        <div class="card-body">
+                        
+                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                <div class="avatar avatar-xl mr-6">
+                                    <img src="{% static 'manage/assets/images/people/256/256_rsz_nicolas-horn-689011-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body">
+                                    <div class="posts-card__title flex d-flex flex-column">
+                                        <h6 class="card-title m-0">&nbsp;IGT:  @Iambigfish</h6>
+                                        <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">verified_user</i><strong>Influencer</strong>&nbsp;(Micro)</small>
+                                        <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">location_on</i> <strong>Lagos, NG</strong></small>
+                                        <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">person</i> <strong>36</strong>&nbsp; / 4<i class="material-icons text-accent ml-4pt icon-16pt">star</i></small>
+                                    </div>
+                                </div>
+                            </div>
+                                <p class="m-0 align-items-center">Christopher Mc Callister J.</p>
+                            <div class="text-muted flex">
+                                <span class="badge badge-primary">Lifestyle</span>
+                                <span class="badge badge-primary">Fitness</span>
+                                <span class="badge badge-primary">Gym</span>
+                                <span class="badge badge-primary">Food</span>
+                            </div>
+                            <div class="page-separator"></div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle="swal" data-swal-title="Good job!" data-swal-text="Trender Added to Campaign!" data-swal-type="success">
+                                <i class="material-icons icon--left">add_circle</i> Add / Invite
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Removed" data-swal-text="Trender Removed from Campaign!" data-swal-type="error">
+                                <i class="material-icons icon--left">remove_circle</i> Remove
+                            </button>
+                        
+                        </div>
+                    </div>
+                    <div class="card card--raised">
+                    
+                    <div class="card-body">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/instagram.png' %}" alt="INS" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3 align-items-left">Post: N3,134,450.99</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3 align-items-left">Story: N234,450.88</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-separator"></div>
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/facebook.png' %}" alt="FB" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3 align-items-left">Post: N3,134,450.99</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3 align-items-left">Story: N234,450.88</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-separator"></div>
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/snapchat.png' %}" alt="SC" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3 align-items-left">Post: N3,134,450.99</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3 align-items-left">Story: N234,450.88</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-separator"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/youtube.png' %}" alt="YT" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3">Post: N3,134,450.99</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="page-separator"></div>
+
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" alt="TK" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3">Post: N3,134,450.99</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-separator"></div>
+
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/twitter.png' %}" alt="TW" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3">Post: N3,134,450.99</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-separator"></div>
+                        
+                    </div>                        
+                    
+                </div>
+            </div>
+
+                <div class="card p-8pt mb-0 d-inline-block">
+
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination pagination-sm ">
+                            <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                <span>Prev</span>
+                            </a>
+                            </li>
+                            
+                            <li class="page-item active">
+                            <a class="page-link" href="#" aria-label="1">
+                                <span>1</span>
+                            </a>
+                            </li>
+                            
+                            <li class="page-item">
+                            <a class="page-link" href="#" aria-label="2">
+                                <span>2</span>
+                            </a>
+                            </li>
+                            
+                            <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span>Next</span>
+                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                            </a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+
+                </div>
+                <br><br>
+                                <!-- <button type="submit" class="btn btn-primary" >NEXT -> BRIEF</button> -->
+                                <a href="reviewandpayment.html">
+                                        <button type="button" class="btn btn-accent">
+                                            <i class="material-icons icon--left">forward</i> REVIEW AND PAYMENT
+                                        </button>
+                                </a>
+            
+            </div>
+            <!--  ####### Page content end  ######   -->
+
+            <!-- footer include -->
+            {% include 'manage/footer_include.html' %}
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+        <!-- drawer -->
+        {% include 'manage/navigation_panel.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    {% include 'manage/js_attachments.html' %}
+    <!-- JS settings and attachments  -->
+
+    <!-- Range Slider -->
+    <script src="{% static 'manage/assets/vendor/ion.rangeSlider.min.js' %}"></script>
+    <script src="{% static 'manage/assets/js/ion-rangeslider.js' %}"></script>
+     <!-- Touchspin -->
+     <script src="{% static 'manage/assets/vendor/jquery.bootstrap-touchspin.js' %}"></script>
+    <script src="{% static 'manage/assets/js/touchspin.js' %}"></script>
+
+    <!-- Sweet Alert -->
+    <script src="{% static 'manage/assets/vendor/sweetalert.min.js' %}"></script>
+    <script src="{% static 'manage/assets/js/sweetalert.js' %}"></script>
+
+    
+    <!-- Modal HTML -->
+    <div id="modalCenter" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content justify-content-center">
+                <div class="modal-header">
+                    <h6 class="modal-title">Trender's Informations and Rate(s)</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                <div class="card-group border-left-4 border-left-accent mb-32pt">
+                    <div class="card">
+                        <div class="card-body">
+                        
+                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                <div class="avatar avatar-xl mr-6">
+                                    <img src="{% static 'manage/assets/images/people/256/256_rsz_nicolas-horn-689011-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body">
+                                    <div class="posts-card__title flex d-flex flex-column">
+                                        <h6 class="card-title m-0">&nbsp;IGT:  @Iambigfish</h6>
+                                        <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">verified_user</i><strong>Influencer</strong>&nbsp;(Micro)</small>
+                                        <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">location_on</i> <strong>Lagos, NG</strong></small>
+                                        <small class="text-50">&nbsp;<i class="material-icons text-success icon-16pt mr-1">person</i> <strong>36</strong>&nbsp; / 4<i class="material-icons text-accent ml-4pt icon-16pt">star</i></small>
+                                    </div>
+                                </div>
+                            </div>
+                                <p class="m-0 align-items-center">Christopher Mc Callister J.</p>
+                            <div class="text-muted flex">
+                                <span class="badge badge-primary">Lifestyle</span>
+                                <span class="badge badge-primary">Fitness</span>
+                                <span class="badge badge-primary">Gym</span>
+                                <span class="badge badge-primary">Food</span>
+                            </div>
+                            <div class="page-separator"></div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle="swal" data-swal-title="Good job!" data-swal-text="Trender Added to Campaign!" data-swal-type="success">
+                                <i class="material-icons icon--left">add_circle</i> Add / Invite
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light" data-toggle="swal" data-swal-title="Removed" data-swal-text="Trender Removed from Campaign!" data-swal-type="error">
+                                <i class="material-icons icon--left">remove_circle</i> Remove
+                            </button>
+                        
+                        </div>
+                    </div>
+                    <div class="card card--raised">
+                    
+                        <div class="card-body">
+                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                <div class="avatar avatar-32pt mr-8pt">
+                                    <img src="{% static 'manage/assets/images/icon/instagram.png' %}" alt="INS" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body">
+                                    <div class="d-flex align-items-center">
+                                        <table class="flex d-flex flex-column">
+                                            <tr>
+                                                <td>
+                                                        <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                            <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                            <span class="mx-3 align-items-left">Post: N3,134,450.99</span>
+                                                            <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        </small>
+                                                        <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                            <span class="flex text-body">Followers</span>
+                                                            <span class="mx-3 align-items-left">Story: N234,450.88</span>
+                                                            <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                        </small>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-separator"></div>
+                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                <div class="avatar avatar-32pt mr-8pt">
+                                    <img src="{% static 'manage/assets/images/icon/facebook.png' %}" alt="FB" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body">
+                                    <div class="d-flex align-items-center">
+                                        <table class="flex d-flex flex-column">
+                                            <tr>
+                                                <td>
+                                                        <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                            <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                            <span class="mx-3 align-items-left">Post: N3,134,450.99</span>
+                                                            <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        </small>
+                                                        <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                            <span class="flex text-body">Followers</span>
+                                                            <span class="mx-3 align-items-left">Story: N234,450.88</span>
+                                                            <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                        </small>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-separator"></div>
+                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                <div class="avatar avatar-32pt mr-8pt">
+                                    <img src="{% static 'manage/assets/images/icon/snapchat.png' %}" alt="SC" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body">
+                                    <div class="d-flex align-items-center">
+                                        <table class="flex d-flex flex-column">
+                                            <tr>
+                                                <td>
+                                                        <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                            <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                            <span class="mx-3 align-items-left">Post: N3,134,450.99</span>
+                                                            <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        </small>
+                                                        <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                            <span class="flex text-body">Followers</span>
+                                                            <span class="mx-3 align-items-left">Story: N234,450.88</span>
+                                                            <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                        </small>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-separator"></div>
+                        </div>
+                    </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/youtube.png' %}" alt="YT" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3">Post: N3,134,450.99</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="page-separator"></div>
+
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/tiktok.png' %}" alt="TK" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3">Post: N3,134,450.99</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-separator"></div>
+
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+                                <img src="{% static 'manage/assets/images/icon/twitter.png' %}" alt="TW" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body">
+                                <div class="d-flex align-items-center">
+                                    <table class="flex d-flex flex-column">
+                                        <tr>
+                                            <td>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                                        <span class="flex text-body"><i class="material-icons text-success icon-16pt mr-1">person</i>450k</span>
+                                                        <span class="mx-3">Post: N3,134,450.99</span>
+                                                    </small>
+                                                    <small class="d-flex align-items-center font-weight-bold text-muted">
+                                                        <span class="flex text-body">Followers</span>
+                                                        <span class="mx-3"><i class="material-icons text-primary icon-16pt mr-1">supervised_user_circle</i> 80k</span>
+                                                        <span class="d-flex align-items-center"><i class="material-icons text-primary icon-16pt mr-1">thumb_up_alt</i> 3.0%</span>
+                                                    </small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-separator"></div>
+                        
+                    </div>                        
+                    
+                </div>
+        </div>
+    </div>
+    <!-- Modal HTML -->
+</body>
+
+</html>

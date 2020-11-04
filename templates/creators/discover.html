@@ -1,0 +1,998 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Creators & Influencers | Discover Campaigns!</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'brands/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->  
+    <link type="text/css" href="{% static 'brands/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'brands/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'brands/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'brands/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'brands/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/jqvmap/jqvmap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr-airbnb.rtl.css' %}" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/daterangepicker.css' %}" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="{% static 'brands/assets/css/quill.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/quill.rtl.css' %}" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="{% static 'brands/assets/css/bootstrap-touchspin.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/bootstrap-touchspin.rtl.css' %}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="{% static 'brands/assets/css/select2.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/select2.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/vendor/select2/select2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_creators_index' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'brands/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Influencers & Content Creators</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Naira</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select Currency</strong></div>
+                            <a class="dropdown-item active" href="">Naira</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons icon-24pt">mail_outline</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'brands/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">Clients loved the new design.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'brands/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">🔥 Superb job..</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+                <div class="dropdown border-left-2 navbar-border">
+                    <button class="navbar-toggler navbar-toggler-custom d-block" type="button" data-toggle="dropdown" data-caret="false">
+                        <span class="material-icons">business_center</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>Account Type</strong></div>
+                        <a href="" class="dropdown-item active d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-primary">CC</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Creator.</strong>
+                                    <span class="text-black-50">Micro</span>
+                                </span>
+                            </small>
+                        </a>
+                        <a href="" class="dropdown-item d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-accent">IN</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Influencers</strong>
+                                    <span class="text-black-50">Micro</span>
+                                </span>
+                            </small>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+
+
+            <div class="border-bottom-2 py-32pt position-relative z-1">
+                <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+
+                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">Discover Campaigns!</h2>
+
+
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="{% url 'dev_creators_index' %}">Home</a></li>
+
+                                <li class="breadcrumb-item">
+
+                                    <a href="discover.html">Campaign Mgt</a>
+
+                                </li>
+
+                                <li class="breadcrumb-item active">
+
+                                    Discover
+
+                                </li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row" role="tablist">
+                        <div class="col-auto d-flex flex-column">
+                            <h6 class="m-0"><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="n" class="flex">12.3k</h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">
+                                Earnings
+                                <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                            </p>
+                        </div>
+                        <div class="col-auto border-left">
+                            <h6 class="m-0">4 <i class="material-icons text-accent ml-4pt icon-16pt">star</i></h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">
+                                Star
+                                <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                            </p>
+                        </div>
+                        <div class="col-auto border-left">
+                            <h6 class="m-0"><i class="material-icons text-primary ml-4pt icon-16pt">filter_1</i> </h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">Level</p>  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--  ####### Page content ######   -->
+            <div class="container-fluid page__container">
+            
+            <div class="page-section">
+
+                                        <div class="alert alert-soft-accent alert-dismissible fade show" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <div class="d-flex flex-wrap align-items-start">
+                                                <div class="mr-8pt">
+                                                <i class="material-icons">access_time</i>
+                                                </div>
+                                                <div class="flex" style="min-width: 180px">
+                                                <small class="text-black-100">
+                                                    <strong>Alert! - </strong> Note: You will only see campaigns that matches your level!
+                                                </small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-form d-flex flex-column flex-sm-row mb-lg-32pt">
+                                            <div class="card-form__body card-body-form-group flex">
+                                                <div class="row">
+                                                    <div class="col-sm-auto">
+                                                        <div class="form-group">
+                                                            <label for="filter_name">Campaign Name</label>
+                                                            <input id="filter_name" type="text" class="form-control" placeholder="Search by name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-auto">
+                                                        <div class="form-group">
+                                                            <label for="filter_category">Category</label><br>
+                                                            <select id="filter_category" class="custom-select" style="width: 200px;">
+                                                                <option value="all">All Categories</option>
+                                                                <option value="travel">Travel</option>
+                                                                <option value="bf">Banking & Finance</option>
+                                                                <option value="Music">Music</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-auto">
+                                                        <div class="form-group">
+                                                            <label for="filter_stock">Active</label>
+                                                            <div class="custom-control custom-checkbox mt-sm-2">
+                                                                <input type="checkbox" class="custom-control-input" id="filter_stock" checked="">
+                                                                <label class="custom-control-label" for="filter_stock">Yes</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-auto">
+                                                        <div class="form-group" style="width: 200px;">
+                                                            <label for="filter_date">Date Range</label>
+                                                            <input id="filter_date" type="text" class="form-control" placeholder="Select date ..." value="13/03/2018 to 20/03/2018" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-alt-format="d/m/Y" data-flatpickr-date-format="d/m/Y">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn bg-alt border-left border-top border-top-sm-0 rounded-0"><i class="material-icons text-primary icon-20pt">search</i></button>
+                                        </div>
+                    
+                    <div class="page-separator">
+                        <div class="page-separator__text">Campaign Marketplace</div>
+                    </div>
+
+                    <div class="row card-group-row">
+                    <!-- ############# START CAMPAIGN BOX ######################  -->
+                        <div class="col-lg-4 card-group-row__col">
+
+                            <div class="card card-group-row__card p-16pt">
+
+                                <a href="discover_details.html" class="d-block mb-16pt"><img src="{% static 'brands/assets/images/stories/256_rsz_dex-ezekiel-761373-unsplash.jpg' %}" alt="" style="height: 104px;" class="card-img card-img-cover"></a>
+
+
+                                    <div class="d-flex">
+                                        <div class="d-flex flex-column flex">
+                                            <a href="discover_details.html" class="mb-8pt"><strong>Guinness Extra campaign</strong></a>
+                                            <div class="d-flex align-items-center mb-8pt">
+
+                                                <a href="discover_details.html" class="mr-4pt"><span class="indicator-line rounded bg-primary"></span></a>
+
+                                            </div>
+                                            
+                                            <div class="row" role="tablist">
+                                                <div class="col-auto d-flex flex-column">
+                                                    <h6 class="m-0"><small>Influencer </small></h6>
+                                                    <p class="text-50 mb-0 d-flex align-items-center">
+                                                        <small>Type</small>
+                                                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto border-left">
+                                                    <h6 class="m-0"><small>18 +</small></h6>
+                                                    <p class="text-50 mb-0 d-flex align-items-center">
+                                                        <small>Age</small>
+                                                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto border-left">
+                                                    <h6 class="m-0"><small>6 day(s) </small></h6>
+                                                    <p class="text-50 mb-0 d-flex align-items-center"><small>Expiring</small>
+                                                    <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                </p>  
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <p class="align-items-center"><small>Platform:</small> &nbsp; <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                            </p>
+                                        </div>
+                                        <a href="#"><i class="material-icons text-50">more_horiz</i></a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex d-flex align-items-center">
+                                            <button type="button" class="btn btn-secondary btn-sm">
+                                                <i class="material-icons icon--left">thumb_up  </i> Apply
+                                            </button>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="avatar-group flex mr-8pt">
+
+                                                <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                    <a href=""><img src="{% static 'brands/assets/images/256_rsz_1andy-lee-642320-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                </div>
+
+                                                <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                    <a href=""><img src="{% static 'brands/assets/images/256_michael-dam-258165-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                </div>
+
+                                                <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                    <a href=""><img src="{% static 'brands/assets/images/256_luke-porter-261779-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="media-body">
+                                                <span><small>+8,236 more</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+                       <!-- ############# END CAMPAIGN BOX ######################  --> 
+
+                         <!-- ############# START CAMPAIGN BOX ######################  -->
+                        <div class="col-lg-4 card-group-row__col">
+
+                                <div class="card card-group-row__card p-16pt">
+
+
+                                        <a href="discover_details.html" class="d-block mb-16pt"><img src="{% static 'brands/assets/images/stories/256_rsz_jared-rice-388260-unsplash.jpg' %}" alt="" style="height: 104px;" class="card-img card-img-cover"></a>
+
+
+                                        <div class="d-flex">
+                                            <div class="d-flex flex-column flex">
+                                                <a href="discover_details.html" class="mb-8pt"><strong>Cadbury Bournvita campaign</strong></a>
+                                                <div class="d-flex align-items-center mb-8pt">
+
+                                                    <a href="discover_details.html" class="mr-4pt"><span class="indicator-line rounded bg-primary"></span></a>
+
+                                                </div>
+                                                
+                                                <div class="row" role="tablist">
+                                                    <div class="col-auto d-flex flex-column">
+                                                        <h6 class="m-0"><small>Influencer </small></h6>
+                                                        <p class="text-50 mb-0 d-flex align-items-center">
+                                                            <small>Type</small>
+                                                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-auto border-left">
+                                                        <h6 class="m-0"><small>18 +</small></h6>
+                                                        <p class="text-50 mb-0 d-flex align-items-center">
+                                                            <small>Age</small>
+                                                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-auto border-left">
+                                                        <h6 class="m-0"><small>24 day(s) </small></h6>
+                                                        <p class="text-50 mb-0 d-flex align-items-center"><small>Expiring</small>
+                                                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                    </p>  
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <p class="align-items-center"><small>Platform:</small> &nbsp; <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                    <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                    <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                    <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                    <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                    <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                                </p>
+                                            </div>
+                                            <a href="#"><i class="material-icons text-50">more_horiz</i></a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex d-flex align-items-center">
+                                                <button type="button" class="btn btn-secondary btn-sm">
+                                                    <i class="material-icons icon--left">thumb_up  </i> Applied
+                                                </button>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-group flex mr-8pt">
+
+                                                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                        <a href=""><img src="{% static 'brands/assets/images/256_rsz_1andy-lee-642320-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                    </div>
+
+                                                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                        <a href=""><img src="{% static 'brands/assets/images/256_michael-dam-258165-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                    </div>
+
+                                                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                        <a href=""><img src="{% static 'brands/assets/images/256_luke-porter-261779-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div class="media-body">
+                                                    <span><small>+1,286 more</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                        </div>
+                        <!-- ############# END CAMPAIGN BOX ######################  --> 
+
+                         <!-- ############# START CAMPAIGN BOX ######################  -->
+                         <div class="col-lg-4 card-group-row__col">
+
+                            <div class="card card-group-row__card p-16pt">
+
+
+                                    <a href="" class="d-block mb-16pt"><img src="{% static 'brands/assets/images/stories/256_rsz_clem-onojeghuo-193397-unsplash.jpg' %}" alt="" style="height: 104px;" class="card-img card-img-cover"></a>
+
+
+                                    <div class="d-flex">
+                                        <div class="d-flex flex-column flex">
+                                            <a href="#" class="mb-8pt"><strong>CNN News campaign</strong></a>
+                                            <div class="d-flex align-items-center mb-8pt">
+
+                                                <a href="" class="mr-4pt"><span class="indicator-line rounded bg-primary"></span></a>
+
+                                            </div>
+                                            
+                                            <div class="row" role="tablist">
+                                                <div class="col-auto d-flex flex-column">
+                                                    <h6 class="m-0"><small>Influencer </small></h6>
+                                                    <p class="text-50 mb-0 d-flex align-items-center">
+                                                        <small>Type</small>
+                                                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto border-left">
+                                                    <h6 class="m-0"><small>18 +</small></h6>
+                                                    <p class="text-50 mb-0 d-flex align-items-center">
+                                                        <small>Age</small>
+                                                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto border-left">
+                                                    <h6 class="m-0"><small>36 day(s) </small></h6>
+                                                    <p class="text-50 mb-0 d-flex align-items-center"><small>Expiring</small>
+                                                    <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                </p>  
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <p class="align-items-center"><small>Platform:</small> &nbsp; <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                                                <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                                <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                                                <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                                <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                                                <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                                            </p>
+                                        </div>
+                                        <a href="#"><i class="material-icons text-50">more_horiz</i></a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex d-flex align-items-center">
+                                            <button type="button" class="btn btn-secondary btn-sm">
+                                                <i class="material-icons icon--left">thumb_up  </i> Applied
+                                            </button>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="avatar-group flex mr-8pt">
+
+                                                <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                    <a href=""><img src="{% static 'brands/assets/images/256_rsz_1andy-lee-642320-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                </div>
+
+                                                <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                    <a href=""><img src="{% static 'brands/assets/images/256_michael-dam-258165-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                </div>
+
+                                                <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                    <a href=""><img src="{% static 'brands/assets/images/256_luke-porter-261779-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="media-body">
+                                                <span><small>+298 more</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- ############# END CAMPAIGN BOX ######################  --> 
+
+                            <!-- ############# START CAMPAIGN BOX ######################  -->
+                        <div class="col-lg-4 card-group-row__col">
+
+<div class="card card-group-row__card p-16pt">
+
+    <a href="" class="d-block mb-16pt"><img src="{% static 'brands/assets/images/stories/256_rsz_dex-ezekiel-761373-unsplash.jpg' %}" alt="" style="height: 104px;" class="card-img card-img-cover"></a>
+
+
+        <div class="d-flex">
+            <div class="d-flex flex-column flex">
+                <a href="#" class="mb-8pt"><strong>Guinness Extra campaign</strong></a>
+                <div class="d-flex align-items-center mb-8pt">
+
+                    <a href="" class="mr-4pt"><span class="indicator-line rounded bg-primary"></span></a>
+
+                </div>
+                
+                <div class="row" role="tablist">
+                    <div class="col-auto d-flex flex-column">
+                        <h6 class="m-0"><small>Influencer </small></h6>
+                        <p class="text-50 mb-0 d-flex align-items-center">
+                            <small>Type</small>
+                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                        </p>
+                    </div>
+                    <div class="col-auto border-left">
+                        <h6 class="m-0"><small>18 +</small></h6>
+                        <p class="text-50 mb-0 d-flex align-items-center">
+                            <small>Age</small>
+                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                        </p>
+                    </div>
+                    <div class="col-auto border-left">
+                        <h6 class="m-0"><small>6 day(s) </small></h6>
+                        <p class="text-50 mb-0 d-flex align-items-center"><small>Expiring</small>
+                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                    </p>  
+                    </div>
+                </div>
+                <br>
+                <p class="align-items-center"><small>Platform:</small> &nbsp; <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                    <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                    <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                    <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                    <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                    <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                </p>
+            </div>
+            <a href="#"><i class="material-icons text-50">more_horiz</i></a>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="flex d-flex align-items-center">
+                <button type="button" class="btn btn-secondary btn-sm">
+                    <i class="material-icons icon--left">thumb_up  </i> Apply
+                </button>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="avatar-group flex mr-8pt">
+
+                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                        <a href=""><img src="{% static 'brands/assets/images/256_rsz_1andy-lee-642320-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                    </div>
+
+                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                        <a href=""><img src="{% static 'brands/assets/images/256_michael-dam-258165-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                    </div>
+
+                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                        <a href=""><img src="{% static 'brands/assets/images/256_luke-porter-261779-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                    </div>
+
+
+
+                </div>
+                <div class="media-body">
+                    <span><small>+8,236 more</small></span>
+                </div>
+            </div>
+        </div>
+</div>
+
+</div>
+<!-- ############# END CAMPAIGN BOX ######################  --> 
+
+<!-- ############# START CAMPAIGN BOX ######################  -->
+<div class="col-lg-4 card-group-row__col">
+
+    <div class="card card-group-row__card p-16pt">
+
+
+            <a href="" class="d-block mb-16pt"><img src="{% static 'brands/assets/images/stories/256_rsz_jared-rice-388260-unsplash.jpg' %}" alt="" style="height: 104px;" class="card-img card-img-cover"></a>
+
+
+            <div class="d-flex">
+                <div class="d-flex flex-column flex">
+                    <a href="#" class="mb-8pt"><strong>Cadbury Bournvita campaign</strong></a>
+                    <div class="d-flex align-items-center mb-8pt">
+
+                        <a href="" class="mr-4pt"><span class="indicator-line rounded bg-primary"></span></a>
+
+                    </div>
+                    
+                    <div class="row" role="tablist">
+                        <div class="col-auto d-flex flex-column">
+                            <h6 class="m-0"><small>Influencer </small></h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">
+                                <small>Type</small>
+                                <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                            </p>
+                        </div>
+                        <div class="col-auto border-left">
+                            <h6 class="m-0"><small>18 +</small></h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">
+                                <small>Age</small>
+                                <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                            </p>
+                        </div>
+                        <div class="col-auto border-left">
+                            <h6 class="m-0"><small>24 day(s) </small></h6>
+                            <p class="text-50 mb-0 d-flex align-items-center"><small>Expiring</small>
+                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                        </p>  
+                        </div>
+                    </div>
+                    <br>
+                    <p class="align-items-center"><small>Platform:</small> &nbsp; <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                        <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                        <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                        <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                        <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                        <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                    </p>
+                </div>
+                <a href="#"><i class="material-icons text-50">more_horiz</i></a>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="flex d-flex align-items-center">
+                    <button type="button" class="btn btn-secondary btn-sm">
+                        <i class="material-icons icon--left">thumb_up  </i> Apply
+                    </button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="avatar-group flex mr-8pt">
+
+                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                            <a href=""><img src="{% static 'brands/assets/images/256_rsz_1andy-lee-642320-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                        </div>
+
+                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                            <a href=""><img src="{% static 'brands/assets/images/256_michael-dam-258165-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                        </div>
+
+                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                            <a href=""><img src="{% static 'brands/assets/images/256_luke-porter-261779-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                        </div>
+
+
+
+                    </div>
+                    <div class="media-body">
+                        <span><small>+1,286 more</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+<!-- ############# END CAMPAIGN BOX ######################  --> 
+
+<!-- ############# START CAMPAIGN BOX ######################  -->
+<div class="col-lg-4 card-group-row__col">
+
+<div class="card card-group-row__card p-16pt">
+
+
+        <a href="" class="d-block mb-16pt"><img src="{% static 'brands/assets/images/stories/256_rsz_clem-onojeghuo-193397-unsplash.jpg' %}" alt="" style="height: 104px;" class="card-img card-img-cover"></a>
+
+
+        <div class="d-flex">
+            <div class="d-flex flex-column flex">
+                <a href="#" class="mb-8pt"><strong>CNN News campaign</strong></a>
+                <div class="d-flex align-items-center mb-8pt">
+
+                    <a href="" class="mr-4pt"><span class="indicator-line rounded bg-primary"></span></a>
+
+                </div>
+                
+                <div class="row" role="tablist">
+                    <div class="col-auto d-flex flex-column">
+                        <h6 class="m-0"><small>Influencer </small></h6>
+                        <p class="text-50 mb-0 d-flex align-items-center">
+                            <small>Type</small>
+                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                        </p>
+                    </div>
+                    <div class="col-auto border-left">
+                        <h6 class="m-0"><small>18 +</small></h6>
+                        <p class="text-50 mb-0 d-flex align-items-center">
+                            <small>Age</small>
+                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                        </p>
+                    </div>
+                    <div class="col-auto border-left">
+                        <h6 class="m-0"><small>36 day(s) </small></h6>
+                        <p class="text-50 mb-0 d-flex align-items-center"><small>Expiring</small>
+                        <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                    </p>  
+                    </div>
+                </div>
+                <br>
+                <p class="align-items-center"><small>Platform:</small> &nbsp; <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="18" height="18" alt="Insta">
+                    <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                    <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="Tik">
+                    <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                    <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="Twitter">
+                    <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SNAP">
+                </p>
+            </div>
+            <a href="#"><i class="material-icons text-50">more_horiz</i></a>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="flex d-flex align-items-center">
+                <button type="button" class="btn btn-secondary btn-sm">
+                    <i class="material-icons icon--left">thumb_up  </i> Apply
+                </button>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="avatar-group flex mr-8pt">
+
+                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                        <a href=""><img src="{% static 'brands/assets/images/256_rsz_1andy-lee-642320-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                    </div>
+
+                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                        <a href=""><img src="{% static 'brands/assets/images/256_michael-dam-258165-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                    </div>
+
+                    <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                        <a href=""><img src="{% static 'brands/assets/images/256_luke-porter-261779-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+                    </div>
+
+
+
+                </div>
+                <div class="media-body">
+                    <span><small>+298 more</small></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- ############# END CAMPAIGN BOX ######################  --> 
+
+
+                    </div>
+                    
+
+                    
+
+                    <div class="card p-8pt mb-0 d-inline-block">
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination pagination-sm ">
+                                <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                                </li>
+                                
+                                <li class="page-item active">
+                                <a class="page-link" href="#" aria-label="1">
+                                    <span>1</span>
+                                </a>
+                                </li>
+                                
+                                <li class="page-item">
+                                <a class="page-link" href="#" aria-label="2">
+                                    <span>2</span>
+                                </a>
+                                </li>
+                                
+                                <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>    
+
+            </div>
+            <!--  ####### Page content end  ######   -->
+
+            <!-- footer include -->
+            {% include 'creators/footer_include.html' %}
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+        <!-- drawer -->
+        {% include 'creators/creator_navigation.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    {% include 'creators/js_attachments.html' %}
+    <!-- Chart.js Samples -->
+    <script src="{% static 'brands/assets/js/page.tasks-board.js' %}"></script>
+    <!-- JS settings and attachments  -->
+</body>
+
+</html>

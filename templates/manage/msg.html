@@ -1,0 +1,492 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Administration | Message Board</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'manage/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'manage/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'manage/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'manage/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'manage/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'manage/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'manage/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="{% static 'manage/assets/vendor/jqvmap/jqvmap.min.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_manage_index' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'manage/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IGT Administration & Management</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Naira</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select Currency</strong></div>
+                            <a class="dropdown-item active" href="">Naira</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons icon-24pt">mail_outline</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">Clients loved the new design.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">🔥 Superb job..</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+                <div class="dropdown border-left-2 navbar-border">
+                    <button class="navbar-toggler navbar-toggler-custom d-block" type="button" data-toggle="dropdown" data-caret="false">
+                        <span class="material-icons">business_center</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>Account Type</strong></div>
+                        <a href="" class="dropdown-item active d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-primary">B</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Brand</strong>
+                                    <span class="text-black-50">Manufacturing</span>
+                                </span>
+                            </small>
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+
+
+            <div class="border-bottom-2 py-32pt position-relative z-1">
+                <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+
+                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">Message Board</h2>
+
+
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="{% url 'dev_manage_index' %}">Home</a></li>
+
+                                <li class="breadcrumb-item active">
+
+                                   Message 
+
+                                </li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid page__container">
+                <div class="page-section">
+                <div class="row">
+                        <div class="col-md-8">
+
+                              <div class="card card-body p-lg-24pt">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mr-3">
+                                            <div class="avatar avatar-xl">
+                                                <img src="{% static 'manage/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <h4 class="mb-0">Michelle Smith</h4>
+                                            <p class="text-50 mb-0">Marketing Head-Yellow Lipton Advert</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="card card-body">
+                                <div class="d-flex">
+                                    <a href="" class="avatar avatar-32pt avatar-online mr-12pt">
+                                        <img src="{% static 'manage/assets/images/people/256/256_rsz_nicolas-horn-689011-unsplash.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                    </a>
+                                    <div class="flex">
+                                        <p class="d-flex align-items-center mb-2">
+                                            <a href="" class="text-body mr-2"><strong>Michelle Smith</strong></a>
+                                            <small class="text-muted">2 min ago</small>
+                                        </p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa commodi consequuntur! Optio labore corporis quo a quia, incidunt unde soluta velit ad, eius exercitationem sequi ab laborum! Nostrum voluptate earum sit aperiam quaerat unde, vel excepturi quisquam nihil reprehenderit in minus laudantium eligendi odio iusto nemo, aspernatur, optio soluta!</p>
+                                        <div class="d-flex align-items-center">
+                                            <a href="" class="text-50 d-flex align-items-center text-decoration-0"><i class="material-icons mr-1" style="font-size: inherit;">favorite_border</i> 30</a>
+                                            <a href="" class="text-50 d-flex align-items-center text-decoration-0 ml-3"><i class="material-icons mr-1" style="font-size: inherit;">thumb_up</i> 130</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <a href="" class="avatar avatar-32pt mr-8pt">
+                                    <img src="{% static 'manage/assets/images/people/50/guy-6.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                </a>
+                                <div class="flex">
+                                    <div class="form-group">
+                                        <label for="comment" class="form-label">Your reply</label>
+                                        <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Type here to reply to Matney ..."></textarea>
+                                    </div>
+                                    <button class="btn btn-accent">Post Message</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+
+                            <h5 class="text-70">Campaign Trenders</h5>
+                           <div class="sidebar sidebar-right sidebar-light bg-white o-hidden">
+                                <div class="d-flex flex-column ">
+                                    <div class="d-flex flex-column justify-content-center navbar-height">
+                                        <div class="px-3 form-group mb-0">
+                                            <div class="input-group input-group-merge input-group-rounded flex-nowrap">
+                                            <select id="custom-select" class="form-control custom-select">
+                                                    <option selected>More Campaigns</option>
+                                                    <option value="1">Yellow Lipton</option>
+                                                    <option value="2">Jordan Air shoes</option>
+                                                    <option value="3">Mac book Pro</option>
+                                                </select>
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <span class="material-icons">filter_list</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="flex" data-perfect-scrollbar>
+                                        <div class="sidebar-heading">Online</div>
+                                        <ul class="list-group list-group-flush mb-3">
+
+
+                                            <li class="list-group-item px-3 py-12pt bg-light">
+                                                <a href="#" class="d-flex align-items-center position-relative">
+                                                    <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                        <img src="{% static 'manage/assets/images/people/50/woman-5.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                    </span>
+                                                    <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                        <strong class="text-body">Adara Jones</strong>
+
+                                                        <span class="text-muted text-ellipsis">Influencer</span>
+
+                                                    </span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="list-group-item px-3 py-12pt">
+                                                <a href="#" class="d-flex align-items-center position-relative">
+                                                    <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                        <img src="{% static 'manage/assets/images/people/50/guy-2.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                    </span>
+                                                    <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                        <strong class="text-body">Jimmy Carter</strong>
+                                                        <span class="text-muted text-ellipsis">Creator</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+
+
+                                            <li class="list-group-item px-3 py-12pt">
+                                                <a href="#" class="d-flex align-items-center position-relative">
+                                                    <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                        <img src="{% static 'manage/assets/images/people/50/woman-2.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                    </span>
+                                                    <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                        <strong class="text-body">Samantha Doe</strong>
+                                                        <span class="text-muted text-ellipsis">Influencer</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-3 py-12pt">
+                                                <a href="#" class="d-flex align-items-center position-relative">
+                                                    <span class="avatar avatar-xs avatar-offline mr-3 flex-shrink-0">
+
+                                                        <span class="avatar-title rounded-circle">XD</span>
+
+                                                    </span>
+                                                    <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                        <strong class="text-body">Xander Dale</strong>
+                                                        <span class="text-muted text-ellipsis">Influencer</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                        <div class="sidebar-heading d-flex">
+                                            <div class="flex text-muted">Administrator</div>
+                                        </div>
+                                        <ul class="list-group list-group-flush mb-3">
+
+
+                                            <li class="list-group-item px-3 py-12pt">
+                                                <a href="#" class="d-flex align-items-center position-relative">
+                                                    <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                        <span class="avatar-title rounded-circle">XD</span>
+
+                                                    </span>
+                                                    <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                        <strong class="text-body">Chris Malone</strong>
+                                                        <span class="text-muted text-ellipsis">Admin</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer include -->
+            {% include 'manage/footer_include.html' %}
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+        <!-- drawer -->
+        {% include 'manage/navigation_panel.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    {% include 'manage/js_attachments.html' %}
+    <!-- JS settings and attachments  -->
+</body>
+
+</html>

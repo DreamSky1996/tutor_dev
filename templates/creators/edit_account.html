@@ -1,0 +1,492 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Creators & Influencers | EDIT- Account</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'brands/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'brands/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'brands/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'brands/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'brands/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'brands/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/jqvmap/jqvmap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/flatpickr-airbnb.rtl.css' %}" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/daterangepicker.css' %}" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="{% static 'brands/assets/css/quill.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/quill.rtl.css' %}" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="{% static 'brands/assets/css/bootstrap-touchspin.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/bootstrap-touchspin.rtl.css' %}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="{% static 'brands/assets/css/select2.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/select2.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/vendor/select2/select2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_creators_index' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'brands/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Influencers & Content Creators</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Naira</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select Currency</strong></div>
+                            <a class="dropdown-item active" href="">Naira</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons icon-24pt">mail_outline</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'brands/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">Clients loved the new design.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'brands/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">🔥 Superb job..</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+                <div class="dropdown border-left-2 navbar-border">
+                    <button class="navbar-toggler navbar-toggler-custom d-block" type="button" data-toggle="dropdown" data-caret="false">
+                        <span class="material-icons">business_center</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>Account Type</strong></div>
+                        <a href="" class="dropdown-item active d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-primary">CC</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Creator.</strong>
+                                    <span class="text-black-50">Micro</span>
+                                </span>
+                            </small>
+                        </a>
+                        <a href="" class="dropdown-item d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-accent">IN</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Influencers</strong>
+                                    <span class="text-black-50">Micro</span>
+                                </span>
+                            </small>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+
+
+            <div class="border-bottom-2 py-32pt position-relative z-1">
+                <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+
+                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">Account</h2>
+
+
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="{% url 'dev_creators_index' %}">Home</a></li>
+
+                                <li class="breadcrumb-item">
+
+                                    <a href="edit_account.html">Account</a>
+
+                                </li>
+
+                                <li class="breadcrumb-item active">
+
+                                    Edit Account
+
+                                </li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row" role="tablist">
+                        <div class="col-auto d-flex flex-column">
+                            <h6 class="m-0"><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="n" class="flex">12.3k</h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">
+                                Earnings
+                                <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                            </p>
+                        </div>
+                        <div class="col-auto border-left">
+                            <h6 class="m-0">4 <i class="material-icons text-accent ml-4pt icon-16pt">star</i></h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">
+                                Star
+                                <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                            </p>
+                        </div>
+                        <div class="col-auto border-left">
+                            <h6 class="m-0"><i class="material-icons text-primary ml-4pt icon-16pt">filter_1</i> </h6>
+                            <p class="text-50 mb-0 d-flex align-items-center">Level</p>  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--  ####### Page content ######   -->
+            <div class="container-fluid page__container">
+            
+            <form action="edit_account.html">
+                    <div class="row">
+                        <div class="col-lg-9 pr-lg-0">
+
+                            <div class="page-section">
+                                    <div class="alert alert-soft-accent alert-dismissible fade show" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <div class="d-flex flex-wrap align-items-start">
+                                                <div class="mr-8pt">
+                                                <i class="material-icons">access_time</i>
+                                                </div>
+                                                <div class="flex" style="min-width: 180px">
+                                                <small class="text-black-100">
+                                                    <strong>Alert! - </strong> For security reasons note that some fields are read only & not changeable, Contact support for major changes!
+                                                </small>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                <h4>Basic Information</h4>
+                                <div class="list-group list-group-form">
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">First name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" value="Alexander" placeholder="Your first name ..." readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">Last name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" value="Watson" placeholder="Your last name ..." readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">Email address</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" value="alexander.watson@fake-mail.com" placeholder="Your email address ..." readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">Phone</label>
+                                            <div class="col-sm-9">
+                                                <input type="tel" class="form-control" value="(234) 801 111 1111" placeholder="NG phone: (234) 803-000-0000" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">DoB</label>
+                                            <div class="col-sm-9">
+                                            <input type="hidden" class="form-control flatpickr-input" data-toggle="flatpickr" value="today">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">Country</label>
+                                            <div class="col-sm-9">
+                                                <select id="custom-select" class="form-control custom-select">
+                                                    <option selected>Choose Country</option>
+                                                    <option value="1">Nigeria</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">State</label>
+                                            <div class="col-sm-9">
+                                                <select id="custom-select" class="form-control custom-select">
+                                                    <option selected>Choose State</option>
+                                                    <option value="1">Lagos</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <small class="form-text text-muted">Note that some fields are read only, To change readonly fields contact support.</small>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 page-nav">
+                            <div class="page-section pt-lg-112pt">
+                                <nav class="nav page-nav__menu">
+                                    <a class="nav-link active" href="edit_account.html">Basic Information</a>
+                                    <a class="nav-link" href="edit_profile.html">Social Profile</a>
+                                    <a class="nav-link" href="edit_password.html">Change Password</a>
+                                </nav>
+                                <div class="page-nav__content">
+                                    <button type="submit" class="btn btn-accent">Update Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--  ####### Page content end  ######   -->
+
+            <!-- footer include -->
+            {% include 'creators/footer_include.html' %}
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+        <!-- drawer -->
+        {% include 'creators/creator_navigation.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    {% include 'creators/js_attachments.html' %}
+    <!-- JS settings and attachments  -->
+</body>
+
+</html>

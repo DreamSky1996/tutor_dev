@@ -1,0 +1,84 @@
+{% load static %}
+<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar>
+
+                    <a href="{% url 'dev_creators_index' %}" class="sidebar-brand">
+                        <img class="sidebar-brand-icon" src="{% static 'brands/assets/images/logo/igt_logo.png' %}" alt="IGT">
+                        <span><img class="brand-icon" src="{% static 'brands/assets/images/logo/igthomelogo.png' %}" width="130px" height="32px" alt="IGT"></span>
+                    </a>
+
+
+                    <div class="sidebar-account mx-16pt mb-16pt dropdown">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <img width="32" height="32" class="rounded-circle mr-8pt" src="{% static 'brands/assets/images/people/50/guy-3.jpg' %}" alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="text-black-100">Laza Bogdan</span>
+                                <small class="text-black-50">Influencer</small>
+                            </span>
+                            <i class="material-icons text-black-20 icon-16pt">keyboard_arrow_down</i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-full dropdown-menu-caret-center">
+                            <div class="dropdown-header"><strong><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>ACCOUNT</strong></div>
+                            <a class="dropdown-item" href="edit_account.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">edit</span>Edit Account</a>
+                            <a class="dropdown-item" href="billing.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">money</span>Billing</a>
+                            <a class="dropdown-item" href="payment_history.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">payment</span>Payments</a>
+                            <a class="dropdown-item" href="logout.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">exit_to_app</span>Logout</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="sidebar-heading">Overview</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="{% url 'dev_creators_index' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#campaign_mgt">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                Campaign Mgt
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="campaign_mgt">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mycampaigns.html">
+                                        <span class="fa fa-bullhorn sidebar-menu-icon sidebar-menu-icon--left"></span>
+                                        <span class="sidebar-menu-text">My Campaigns</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="discover.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">search</span>
+                                        <span class="sidebar-menu-text">Discover Campaigns</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="msg.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span>
+                                <span class="sidebar-menu-text">Messages</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="faq.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
+                                <span class="sidebar-menu-text">FAQ</span>
+                            </a>
+                        </li>
+                        <br>
+                        <div class="sidebar-heading"><small class="text-black-50">Support Pin:  5423</small></div>
+                    </ul>
+                    <div class="page-separator"></div>
+                    <div class="sidebar-heading"><a href=""><small class="text-black-50">Terms</small></a></div>
+                    <div class="sidebar-heading"><a href=""><small class="text-black-50">Privacy Policy</small></a></div>
+                    <div class="sidebar-heading"><a href=""><small class="text-black-50">Cookies Policy</small></a></div>
+                    
+
+                </div>
+            </div>
+        </div>

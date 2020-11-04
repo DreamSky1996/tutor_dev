@@ -1,0 +1,852 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Brands & Advertisers | Contacts & Rewards</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'brands/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'brands/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'brands/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'brands/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'brands/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'brands/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'brands/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'brands/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_brands_index' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'brands/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brands & Advertisers</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Naira</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select Currency</strong></div>
+                            <a class="dropdown-item active" href="">Naira</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons icon-24pt">mail_outline</i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'brands/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">Clients loved the new design.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 minutes ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <img src="{% static 'brands/assets/images/people/110/woman-5.jpg' %}" alt="people" class="avatar-img rounded-circle">
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Michelle</strong>
+                                                <span class="text-black-70">🔥 Superb job..</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+                <div class="dropdown border-left-2 navbar-border">
+                    <button class="navbar-toggler navbar-toggler-custom d-block" type="button" data-toggle="dropdown" data-caret="false">
+                        <span class="material-icons">business_center</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>Account Type</strong></div>
+                        <a href="" class="dropdown-item active d-flex align-items-center">
+
+                            <div class="avatar avatar-sm mr-8pt">
+
+                                <span class="avatar-title rounded bg-primary">B</span>
+
+                            </div>
+
+                            <small class="ml-4pt flex">
+                                <span class="d-flex flex-column">
+                                    <strong class="text-black-100">Brands</strong>
+                                    <span class="text-black-50">Manufacturing</span>
+                                </span>
+                            </small>
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+
+
+            <div class="border-bottom-2 py-32pt position-relative z-1">
+                <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+
+                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">Contacts & Rewards</h2>
+
+
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="{% url 'dev_brands_index' %}">Home</a></li>
+
+                                <li class="breadcrumb-item">
+
+                                    <a href="mycampaigns.html">Dashboard</a>
+
+                                </li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--  ####### Page content ######   -->
+            <div class="container-fluid page__container">
+                 <div class="page-section">
+
+                    <div class="page-separator">
+                        <div class="page-separator__text">Overview</div>
+                    </div>
+
+                    <div class="py-32pt navbar-submenu">
+                <div class="container-fluid page__container">
+                    <div class="progression-bar progression-bar--active-accent">
+                        
+                        <a href="#" class="progression-bar__item progression-bar__item--complete">
+                            <span class="progression-bar__item-content">
+                                <i class="material-icons progression-bar__item-icon">done</i>
+                                <span class="progression-bar__item-text h5 mb-0 text-uppercase">Rewards Information</span>
+                            </span>
+                        </a>
+                        <a href="Rewardpayments.html" class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
+                            <span class="progression-bar__item-content">
+                                <i class="material-icons progression-bar__item-icon"></i>
+                                <span class="progression-bar__item-text h5 mb-0 text-uppercase">Payment details</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                    <div class="py-32pt py-lg-64pt">
+                        <div class="container-fluid page__container">
+                            <div class="col-lg-08 p-0 mx-auto">
+                                <div class="row">
+                                <div class="list-group list-group-form">
+                                    <div class="list-group-item d-flex align-items-center">
+                                    
+                                        <div class="flex text-center"> <span><i class="material-icons text-primary ml-4pt icon-16pt">card_giftcard</i></span> &nbsp; <strong>INSERT TOPUP INFORMATION</strong></div>
+                                    </div>
+                                    
+                                    <div class="list-group-item">
+                                        <fieldset role="group" aria-labelledby="label-type" class="m-0 form-group">
+                                            <div class="form-row align-items-center">
+                                                <label for="payment_cc" id="label-type" class="col-md-3 col-form-label form-label">Reward type</label>
+                                                <div role="group" aria-labelledby="label-type" class="col-md-9">
+                                                    <div role="group" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-outline-secondary active">
+                                                            <input type="radio" id="payment_cc" name="payment_type" value="" checked="" aria-checked="true" /> Mobile Airtime
+                                                        </label>
+                                                        <label class="btn btn-outline-secondary">
+                                                            <input type="radio" id="payment_pp" name="payment_type" value="" aria-checked="true" /> Data Bundle
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="form-label col-form-label col-sm-3">Amount</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" value="" placeholder="N1,000" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-group row align-items-center mb-0">
+                                            <label class="col-form-label form-label col-sm-3">IGT username</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="@vickypumpin" />
+                                            </div>
+                                        </div>
+                                        <small> You can also check the contacts list for multiple contacts recharge!</small>
+                                    </div>
+                                    
+                                </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-0">
+                                            <div class="card-body">
+                                                <h5>Purchase summary</h5>
+                                                <div class="d-flex mb-8pt">
+                                                    <div class="flex"><strong class="text-70">Rewards</strong></div>
+                                                    <strong>Total</strong>
+                                                </div>
+
+                                                <div class="alert alert-soft-warning">
+                                                    <div class="d-flex flex-wrap align-items-start">
+                                                        <div class="mr-8pt">
+                                                            <i class="material-icons">check</i>
+                                                        </div>
+                                                        <div class="flex" style="min-width: 180px">
+                                                            <strong class="text-black-100">
+                                                            <img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="N" class="flex" width="14" hieght="14">1,000 X 16 Trenders 
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex mb-16pt pb-16pt border-bottom">
+                                                    <div class="flex"><strong class="text-70">Total Reward</strong></div>
+                                                    <strong><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="N" class="flex" width="14" hieght="14">16,000</strong>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked id="topic-all">
+                                                    <label class="custom-control-label">Terms and conditions</label>
+                                                    <small class="form-text text-muted">By checking here and continuing, I agree to the IGT Terms of Use</small>
+                                                </div>
+
+                                                <div class="list-group-item">
+                                                    <div class="form-group row align-items-center mb-0">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="col-sm-9">
+                                                            <a href="rewardconfirmation.html" class="btn btn-accent">Proceed to Pay</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-separator">
+                        <div class="page-separator__text">Contacts</div>
+                    </div>
+                    <!--  ####### Campaign table  ######   -->
+                    
+                    <div class="card mb-0">
+
+                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
+
+
+
+                        <div class="card-header">
+                            <form class="form-inline">
+                                <label class="mr-sm-2 form-label" for="inlineFormFilterBy">Filter by:</label>
+                                <input type="text" class="form-control search mb-2 mr-sm-2 mb-sm-0" id="inlineFormFilterBy" placeholder="Search ...">
+
+                                <label class="sr-only" for="inlineFormRole">Role</label>
+                                <select id="inlineFormRole" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+                                    <option value="All Roles">All Roles</option>
+                                </select>
+
+                                <div class="d-flex flex-column justify-content-center navbar-height">
+                                        <div class="px-3 form-group mb-0">
+                                            <div class="input-group input-group-merge input-group-rounded flex-nowrap">
+                                            <select id="custom-select" class="form-control custom-select">
+                                                    <option selected>Guiness stout Campaigns</option>
+                                                    <option value="1">Yellow Lipton</option>
+                                                    <option value="2">Jordan Air shoes</option>
+                                                    <option value="3">Mac book Pro</option>
+                                                </select>
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <span class="material-icons">filter_list</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                                    <label class="form-label mb-0" for="active">Active</label>
+                                    <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                        <input checked="" type="checkbox" id="active" class="custom-control-input">
+                                        <label class="custom-control-label" for="active">Active</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <table class="table mb-0 thead-border-top-0 table-nowrap">
+                            <thead>
+                                <tr>
+
+                                    <th style="width: 18px;" class="pr-0">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#staff" id="customCheckAll">
+                                            <label class="custom-control-label" for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                        </div>
+                                    </th>
+
+                                    <th>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Trender(s)</a>
+                                    </th>
+
+                                    <th style="width: 150px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employer-name">Category</a>
+                                    </th>
+
+
+                                    <th class="text-center" style="width: 48px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-projects">Level</a>
+                                    </th>
+
+
+                                    <th style="width: 37px;">Badge</th>
+
+                                    <th style="width: 120px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-activity">Platform</a>
+                                    </th>
+                                    <th style="width: 51px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-earnings">PayOut(s)</a>
+                                    </th>
+                                    <th style="width: 24px;" class="pl-0"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="list" id="staff">
+
+                                <tr class="selected">
+
+                                    <td class="pr-0">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input js-check-selected-row" checked="" id="customCheck1_1">
+                                            <label class="custom-control-label" for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+                                               <a data-toggle="modal" href="#modalCenter"><img src="{% static 'brands/assets/images/people/110/guy-1.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+
+
+                                            </div>
+                                            <div class="media-body">
+
+
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Michael Smith</strong></p>
+                                                    <a data-toggle="modal" href="#modalCenter"><small class="js-lists-values-employee-email text-50">@stacey007</small></a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                            <a href="" class="text-70"><span class="js-lists-values-employer-name">Influencer</span></a>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-center js-lists-values-projects small">4</td>
+
+                                    <td>
+
+
+                                        <a href="" class="chip chip-outline-secondary">Macro</a>
+
+
+                                    </td>
+
+                                    <td class="text-50 js-lists-values-activity small">
+                                        <span>
+                                          <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="16" height="16" alt="IN">
+                                          <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                          <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="TT">
+                                        </span>
+                                    </td>
+                                    <td class="js-lists-values-earnings small"><strong><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="N" width="11px" height="11px" class="flex">2,500,987.00</strong></td>
+                                    <td class="text-right pl-0">
+                                        <div class="dropdown ml-auto">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted text-50"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a data-toggle="modal" href="#modalCenter" class="dropdown-item">View</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Accept</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Decline</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="pr-0">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input js-check-selected-row" id="customCheck1_2">
+                                            <label class="custom-control-label" for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+
+                                            <a data-toggle="modal" href="#modalCenter"><span class="avatar-title rounded-circle">CS</span></a>
+
+                                            </div>
+                                            <div class="media-body">
+
+
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Connie Smith</strong></p>
+                                                    <a data-toggle="modal" href="#modalCenter"><small class="js-lists-values-employee-email text-50">IGT@vickypumpin</small></a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                            <a href="" class="text-70"><span class="js-lists-values-employer-name">Influencer</span></a>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-center js-lists-values-projects small">2</td>
+
+                                    <td>
+
+
+                                        <a href="" class="chip chip-outline-secondary">Micro</a>
+
+
+                                    </td>
+
+                                    <td class="text-50 js-lists-values-activity small">
+                                        <span>
+                                            <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                            <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="TT">
+                                            <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SN"> 
+                                        </span>
+                                    </td>
+                                    <td class="js-lists-values-earnings small"><strong><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="N" width="11px" height="11px" class="flex">500,987.00</strong></td>
+                                    <td class="text-right pl-0">
+                                        <div class="dropdown ml-auto">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted text-50"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a data-toggle="modal" href="#modalCenter" class="dropdown-item">View</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Accept</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Decline</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="pr-0">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input js-check-selected-row" id="customCheck1_3">
+                                            <label class="custom-control-label" for="customCheck1_3"><span class="text-hide">Check</span></label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+                                            <a data-toggle="modal" href="#modalCenter"><img src="{% static 'brands/assets/images/people/110/guy-2.jpg' %}" alt="Avatar" class="avatar-img rounded-circle"></a>
+
+
+                                            </div>
+                                            <div class="media-body">
+
+
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">John Connor</strong></p>
+                                                    <a data-toggle="modal" href="#modalCenter"><small class="js-lists-values-employee-email text-50">IGT@iambigfish</small></a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                            <a href="" class="text-70"><span class="js-lists-values-employer-name">Content Creator</span></a>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-center js-lists-values-projects small">1</td>
+
+                                    <td>
+
+
+                                        <a href="" class="chip chip-outline-secondary">Nano</a>
+
+
+                                    </td>
+
+                                    <td class="text-50 js-lists-values-activity small">
+                                        <span>
+                                          <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                          <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="TK"> 
+                                        </span>
+                                    </td>
+                                    <td class="js-lists-values-earnings small"><strong><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="N" width="11px" height="11px" class="flex">20,987.00</strong></td>
+                                    <td class="text-right pl-0">
+                                        <div class="dropdown ml-auto">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted text-50"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a data-toggle="modal" href="#modalCenter" class="dropdown-item">View</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Accept</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Decline</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="selected">
+
+                                    <td class="pr-0">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input js-check-selected-row" checked="" id="customCheck1_4">
+                                            <label class="custom-control-label" for="customCheck1_4"><span class="text-hide">Check</span></label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+
+                                            <a data-toggle="modal" href="#modalCenter"><span class="avatar-title rounded-circle">LB</span></a>
+
+                                            </div>
+                                            <div class="media-body">
+
+
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Laza Bogdan</strong></p>
+                                                    <a data-toggle="modal" href="#modalCenter"><small class="js-lists-values-employee-email text-50">IGT@melooney</small></a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                            <a href="" class="text-70"><span class="js-lists-values-employer-name">Influencer</span></a>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-center js-lists-values-projects small">6</td>
+
+                                    <td>
+
+
+                                        <a href="" class="chip chip-outline-secondary">Celebrity</a>
+
+
+                                    </td>
+
+                                    <td class="text-50 js-lists-values-activity small">
+                                    <span>
+                                    <img src="{% static 'brands/assets/images/icon/facebook.png' %}" width="16" height="16" alt="FB">
+                                    <img src="{% static 'brands/assets/images/icon/tiktok.png' %}" width="16" height="16" alt="TK">
+                                    <img src="{% static 'brands/assets/images/icon/instagram.png' %}" width="16" height="16" alt="IN">
+                                    <img src="{% static 'brands/assets/images/icon/youtube.png' %}" width="16" height="16" alt="YT">
+                                    <img src="{% static 'brands/assets/images/icon/twitter.png' %}" width="16" height="16" alt="TT">
+                                    <img src="{% static 'brands/assets/images/icon/snapchat.png' %}" width="16" height="16" alt="SN">
+                                    </span>
+                                    </td>
+                                    <td class="js-lists-values-earnings small"><strong><img src="{% static 'brands/assets/images/icon/nairalogo.png' %}" alt="N" width="11px" height="11px" class="flex">1,987.00</strong></td>
+                                    <td class="text-right pl-0">
+                                        <div class="dropdown ml-auto">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted text-50"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a data-toggle="modal" href="#modalCenter" class="dropdown-item">View</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Accept</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="javascript:void(0)" class="dropdown-item">Decline</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card-footer p-8pt">
+
+                        <ul class="pagination justify-content-start pagination-xsm m-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item dropdown">
+                                <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                                    <span>1</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="" class="dropdown-item active">1</a>
+                                    <a href="" class="dropdown-item">2</a>
+                                    <a href="" class="dropdown-item">3</a>
+                                    <a href="" class="dropdown-item">4</a>
+                                    <a href="" class="dropdown-item">5</a>
+                                </div>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                            <!-- <div class="card-body bordet-top text-right">
+                            15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+                            </div> -->
+
+
+                </div>
+                   <!--  ####### End campaign table  ######   -->
+                    </div>
+
+
+            </div>
+            <!--  ####### Page content end  ######   -->
+
+            <!-- footer include -->
+            {% include 'brands/footer_include.html' %}
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+        <!-- drawer -->
+        {% include 'brands/navigation_panel.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    <!-- Chart.js Samples -->
+    {% include 'brands/js_attachments.html' %}
+    <script src="{% static 'brands/assets/js/page.projects.js' %}"></script>
+    <!-- JS settings and attachments  -->
+</body>
+
+</html>
