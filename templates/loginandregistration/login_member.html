@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IGT Account Login</title>
+    <meta name="description" content="IGoTrend.com is the #1 influencer marketing platform which conducts campaigns in Africa using digital influencers and content creators">
+    <meta name="keywords" content="influencer,content creators,youtubers,facebookers,instagram,snap chat,tiktok,twitter,music producers,dj,music director,video skit,music,campaign ">
+    <link href="{% static 'loginandregistration/assets/images/logo/igt_ico.ico' %}" rel="icon" />
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/material-icons.rtl.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/fontawesome.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/fontawesome.rtl.css' %}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/preloader.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/preloader.rtl.css' %}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/app.rtl.css' %}" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/dark-mode.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/dark-mode.rtl.css' %}" rel="stylesheet">
+
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/vendor/jqvmap/jqvmap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/flatpickr.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/flatpickr.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/flatpickr-airbnb.rtl.css' %}" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/vendor/daterangepicker.css' %}" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/quill.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/quill.rtl.css' %}" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/bootstrap-touchspin.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/bootstrap-touchspin.rtl.css' %}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/select2.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/css/select2.rtl.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'loginandregistration/assets/vendor/select2/select2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="{% url 'dev_mng_login_staff' %}" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="{% static 'loginandregistration/assets/images/logo/igthomelogo.png' %}" width="104px" alt="IGT">
+                    <span class="d-none d-lg-block">IGoTrend</span>
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <h3 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IGT Account Access</h3>
+                </div>
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="">English</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- // END Header -->
+            <div class="page-separator justify-content-center m-0">
+                <div class="page-separator__text">Member Login</div>
+                <div class="page-separator__bg-top "></div>
+            </div>
+
+            <div class=" pt-32pt pt-sm-64pt pb-32pt">
+                <div class="container page__container">
+                    <form action="{% url 'auth_member' %}" class="col-md-5 p-0 mx-auto" method="post">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <label class="form-label" for="roles">Roles</label>
+                            <select id="roles" class="form-control custom-select" name="role" required>
+                                <option selected>Choose Role</option>
+                                <option value="3">Brands / Advertiser</option>
+                                <option value="4">Creator / Influencer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email or Phone No.:</label>
+                            <input id="email" name="email" type="text" class="form-control" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password:</label>
+                            <input id="password" name="password" type="password" class="form-control" placeholder="" required>
+                            <p class="text-right"><a href="{% url 'forgot_password' %}" class="small">Forgot your password?</a></p>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-accent">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!--  ####### Page content end  ######   -->
+
+            <!-- footer include -->
+            <div class="js-fix-footer footer border-top-2">
+                <div class="container-fluid page__container page-section d-flex flex-column">
+                    <p class="text-70 brand mb-24pt">
+                        <img class="brand-icon" src="{% static 'loginandregistration/assets/images/logo/igthomelogo.png' %}" width="" height="32px" alt="IGT"> 
+                    </p>
+                    <p class="measure-lead-max text-muted mb-0 small">IGoTrend connects brands and advertisers to content creators and influencer </p>
+                </div>
+                
+                <div class="pb-16pt pb-lg-24pt">
+                    <div class="container-fluid page__container">
+                        <div class=" rounded page-section py-lg-32pt px-16pt px-lg-24pt">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
+                                    <p class="text-70 mb-8pt"><strong>Follow us</strong></p>
+                                    <nav class="nav nav-black-links nav--flush">
+                                        <a href="#" class="nav-link mr-8pt"><img src="{% static 'loginandregistration/assets/images/icon/facebook.png' %}" width="24" height="24" alt="Facebook"></a>
+                                        <a href="#" class="nav-link mr-8pt"><img src="{% static 'loginandregistration/assets/images/icon/instagram.png' %}" width="24" height="24" alt="Twitter"></a>
+                                        <a href="#" class="nav-link mr-8pt"><img src="{% static 'loginandregistration/assets/images/icon/youtube.png' %}" width="24" height="24" alt="YouTube"></a>
+                                    </nav>
+                                </div>
+                                <div class="col-lg text-md-right">
+                                    <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
+                                        <a href="https://www.igotrend.com/terms" class="text-70 text-underline mr-16pt">Terms</a>
+                                        <a href="https://www.igotrend.com/privacy" class="text-70 text-underline mr-16pt">Privacy policy</a>
+                                        <a href="https://www.igotrend.com/cookies" class="text-70 text-underline mr-16pt">Cookies policy</a>
+                                    </p>
+                                    <p class="text-50 small mb-0">Copyright 2020 &copy; Snappy Communications! All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer include end  -->
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+        <!-- drawer -->
+        {% include 'loginandregistration/navigationpanel.html' %}
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- JS settings and attachments  -->
+    <!-- App Settings FAB -->
+<div id="app-settings">
+        <app-settings layout-active="app" :layout-location="{'app': 'index.html' }" sidebar-type="light" sidebar-variant="bg-body">
+        </app-settings>
+    </div>
+    <!-- Modal -->
+    
+
+    <!-- jQuery -->
+    <script src="{% static 'loginandregistration/assets/vendor/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'loginandregistration/assets/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="{% static 'loginandregistration/assets/vendor/perfect-scrollbar.min.js' %}"></script>
+
+    <!-- DOM Factory -->
+    <script src="{% static 'loginandregistration/assets/vendor/dom-factory.js' %}"></script>
+
+    <!-- MDK -->
+    <script src="{% static 'loginandregistration/assets/vendor/material-design-kit.js' %}"></script>
+
+    <!-- Fix Footer -->
+    <script src="{% static 'loginandregistration/assets/vendor/fix-footer.js' %}"></script>
+
+    <!-- Chart.js -->
+    <script src="{% static 'loginandregistration/assets/vendor/Chart.min.js' %}"></script>
+
+    <!-- App JS -->
+    <script src="{% static 'loginandregistration/assets/js/app.js' %}"></script>
+
+    <!-- Highlight.js -->
+    <script src="{% static 'loginandregistration/assets/js/hljs.js' %}"></script>
+
+
+    <!-- Global Settings -->
+    <script src="{% static 'loginandregistration/assets/js/settings.js' %}"></script>
+
+    <!-- Dropzone -->
+    <script src="{% static 'loginandregistration/assets/vendor/dropzone.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/dropzone.js' %}"></script>
+
+    <!-- Flatpickr -->
+    <script src="{% static 'loginandregistration/assets/vendor/flatpickr/flatpickr.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/flatpickr.js' %}"></script>
+
+    <!-- Moment.js -->
+    <script src="{% static 'loginandregistration/assets/vendor/moment.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/vendor/moment-range.min.js' %}"></script>
+
+    <!-- Chart.js -->
+    <script src="{% static 'loginandregistration/assets/vendor/Chart.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/chartjs.js' %}"></script>
+
+    <!-- Chart.js Samples -->
+    <script src="{% static 'loginandregistration/assets/js/page.analytics-dashboard.js' %}"></script>
+
+    <!-- Vector Maps -->
+    <script src="{% static 'loginandregistration/assets/vendor/jqvmap/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/vendor/jqvmap/maps/jquery.vmap.world.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/vector-maps.js' %}"></script>
+
+    <!-- List.js -->
+    <script src="{% static 'loginandregistration/assets/vendor/list.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/list.js' %}"></script>
+
+    <!-- Tables -->
+    <script src="{% static 'loginandregistration/assets/js/toggle-check-all.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/check-selected-row.js' %}"></script>
+
+      <!-- Select2 -->
+      <script src="{% static 'loginandregistration/assets/vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'loginandregistration/assets/js/select2.js' %}"></script>
+
+
+    <!-- App Settings (safe to remove) -->
+    <!-- <script src="assets/js/app-settings.js' %}"></script>  -->
+    <!-- JS settings and attachments  -->
+</body>
+
+</html>

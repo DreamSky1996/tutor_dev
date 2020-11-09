@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_countries',
+    'login',
+    'registration',
+    'dev_managers',
+    'dev_brands',
+    'dev_creators',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +82,11 @@ WSGI_APPLICATION = 'igoTrend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'igotrend',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST':'127.0.0.1'
     }
 }
 
@@ -100,6 +109,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -122,3 +141,9 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+UPLOAD_ROOT = os.path.join(BASE_DIR, 'uploads')
+UPLOAD_URL = '/uploads/'

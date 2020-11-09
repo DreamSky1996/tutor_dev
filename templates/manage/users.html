@@ -398,7 +398,7 @@
                                     <tr>
                                         <th style="width: 18px;" class="pr-0">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#employees" id="customCheckAll">
+                                                <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#brands" id="customCheckAll">
                                                 <label class="custom-control-label" for="customCheckAll"><span class="text-hide">Toggle all</span></label>
                                             </div>
                                         </th>
@@ -487,7 +487,8 @@
                                         <th style="width: 24px;"></th>
                                     </tr>
                                 </thead>
-                                <tbody class="list" id="employees">
+                                <tbody class="list" id="brands">
+                                    {% for brand in brands %}
                                     <tr class="small">
                                         <td class="pr-0">
                                             <div class="custom-control custom-checkbox">
@@ -497,91 +498,91 @@
                                         </td>
 
                                         <td>
-                                            <small class="text-50">1</small>
+                                            <small class="text-50">{{brand.id}}</small>
                                         </td>
                                         <td>
-                                            <small class="text-50">4353</small>
+                                            <small class="text-50">{{brand.pin}}</small>
                                         </td>
                                         <td>
                                             <div class="avatar avatar-32pt mr-8pt">
-                                                <img src="{% static 'manage/assets/images/people/110/guy-1.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+                                                <img src="{{brand.photo}}" alt="Avatar" class="avatar-img rounded-circle">
                                             </div>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Billiandro</small>
+                                            <small class="js-lists-values-name">{{brand.first_name}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Christopher</small>
+                                            <small class="js-lists-values-name">{{brand.last_name}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Lipton Label Industries</small>
+                                            <small class="js-lists-values-name">{{brand.company_name}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">teabags@liptonmail.com</small>
+                                            <small class="js-lists-values-name">{{brand.email}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Manufacturing</small>
+                                            <small class="js-lists-values-name">{{brand.company_type}}</small>
                                         </td>
                                         <td class="align-items-center">
-                                            <small class="">1-5</small>
+                                            <small class="">{{brand.company_size}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">10232323</small>
+                                            <small class=" text-50">{{brand.phone}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Brand</small>
+                                            <small class=" text-50">{{brand.roles}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Lagos</small>
+                                            <small class=" text-50">{{brand.state}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name text-50">Nigeria</small>
+                                            <small class="js-lists-values-name text-50">{{brand.country}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">N41,546,768.09</small>
+                                            <small class=" text-50">{{brand.expenditure}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">N6,768.09</small>
+                                            <small class=" text-50">{{brand.reward_sent}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">N546,768.09</small>
+                                            <small class=" text-50">{{brand.unclaimed_funds}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Active</small>
+                                            <small class=" text-50">{{brand.status}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">4stars</small>
+                                            <small class=" text-50">{{brand.ratings}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">iambigfish_69</small>
+                                            <small class="js-lists-values-name">{{brand.username}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{brand.facebook}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{brand.instagram}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{brand.twitter}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{brand.youtube}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{brand.tiktok}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{brand.snap}}</small>
                                         </td>
                                         <td>
                                             <div class="flex d-flex flex-column">
-                                                <p class="mb-0"><small class="js-lists-values-date text-50">19/02/2019 12:45 AM</small></p>
+                                                <p class="mb-0"><small class="js-lists-values-date text-50">{{brand.created}}</small></p>
                                             </div>
                                         </td>
 
                                         <td>
                                             <div class="flex d-flex flex-column">
-                                                <p class="mb-0"><small class="js-lists-values-date text-50">19/02/2019 12:45 AM</small></p>
+                                                <p class="mb-0"><small class="js-lists-values-date text-50">{{brand.updated}}</small></p>
                                             </div>
                                         </td>
                                         <td class="text-right">
@@ -595,6 +596,8 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    {% endfor %}
+                                    <!--
                                     <tr class="selected small">
                                         <td class="pr-0">
                                             <div class="custom-control custom-checkbox">
@@ -809,6 +812,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    -->
                                 </tbody>
                             </table>
                         </div>
@@ -894,7 +898,7 @@
                                     <tr>
                                         <th style="width: 18px;" class="pr-0">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#employees" id="customCheckAll">
+                                                <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#creators" id="customCheckAll">
                                                 <label class="custom-control-label" for="customCheckAll"><span class="text-hide">Toggle all</span></label>
                                             </div>
                                         </th>
@@ -985,7 +989,8 @@
                                         <th style="width: 24px;"></th>
                                     </tr>
                                 </thead>
-                                <tbody class="list" id="employees">
+                                <tbody class="list" id="creators">
+                                    {% for creator in creators %}
                                     <tr class="small">
                                         <td class="pr-0">
                                             <div class="custom-control custom-checkbox">
@@ -995,94 +1000,94 @@
                                         </td>
 
                                         <td>
-                                            <small class="text-50">1</small>
+                                            <small class="text-50">{{creator.id}}</small>
                                         </td>
                                         <td>
-                                            <small class="text-50">4353</small>
+                                            <small class="text-50">{{creator.pin}}</small>
                                         </td>
                                         <td>
                                             <div class="avatar avatar-32pt mr-8pt">
-                                                <img src="{% static 'manage/assets/images/people/110/guy-2.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
+                                                <img src="{{creator.photo}}" alt="Avatar" class="avatar-img rounded-circle">
                                             </div>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Billiandro</small>
+                                            <small class="js-lists-values-name">{{creator.first_name}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Christopher</small>
+                                            <small class="js-lists-values-name">{{creator.last_name}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">teabags@liptonmail.com</small>
+                                            <small class="js-lists-values-name">{{creator.email}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">Gym,Fitness,Lifestyle</small>
+                                            <small class="js-lists-values-name">{{creator.content_category}}</small>
                                         </td>
                                         <td>
-                                            <small class="">10/03/1980</small>
+                                            <small class="">{{creator.birthday}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">08021306565</small>
+                                            <small class=" text-50">{{creator.phone}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Content Creator</small>
+                                            <small class=" text-50">{{creator.roles}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Lagos</small>
+                                            <small class=" text-50">{{creator.state}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name text-50">Nigeria</small>
+                                            <small class="js-lists-values-name text-50">{{creator.country}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Access Bank</small>
+                                            <small class=" text-50">{{creator.bank_name}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">4545465656</small>
+                                            <small class=" text-50">{{creator.account_num}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">N41,546,768.09</small>
+                                            <small class=" text-50">{{creator.earnings}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">N546,768.09</small>
+                                            <small class=" text-50">{{creator.rewards}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Active</small>
+                                            <small class=" text-50">{{creator.status}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">4stars</small>
+                                            <small class=" text-50">{{creator.ratings}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">Level 1</small>
+                                            <small class=" text-50">{{creator.levels}}</small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-name">iambigfish_69</small>
+                                            <small class="js-lists-values-name">{{creator.username}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{creator.facebook}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{creator.instagram}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{creator.twitter}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{creator.youtube}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{creator.tiktok}}</small>
                                         </td>
                                         <td>
-                                            <small class=" text-50">iambigfish_69</small>
+                                            <small class=" text-50">{{creator.snap}}</small>
                                         </td>
                                         <td>
                                             <div class="flex d-flex flex-column">
-                                                <p class="mb-0"><small class="js-lists-values-date text-50">19/02/2019 12:45 AM</small></p>
+                                                <p class="mb-0"><small class="js-lists-values-date text-50">{{creator.created}}</small></p>
                                             </div>
                                         </td>
 
                                         <td>
                                             <div class="flex d-flex flex-column">
-                                                <p class="mb-0"><small class="js-lists-values-date text-50">19/02/2019 12:45 AM</small></p>
+                                                <p class="mb-0"><small class="js-lists-values-date text-50">{{creator.updated}}</small></p>
                                             </div>
                                         </td>
                                         <td class="text-right">
@@ -1096,7 +1101,7 @@
                                             </div>
                                         </td>
                                     </tr>
-
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>

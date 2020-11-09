@@ -16,10 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+from . import settings
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', include('login_reg.urls')),
+    path('login/', include('login.urls')),
+    path('registration/', include('registration.urls')),
     path('developer/manage/', include('dev_managers.urls')),
     path('developer/brands/', include('dev_brands.urls')),
     path('developer/creators/', include('dev_creators.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static(settings.UPLOAD_URL, document_root=settings.UPLOAD_ROOT)

@@ -1,0 +1,52 @@
+{% load static %}        
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar>
+
+                    <a href="{% url 'dev_mng_login_staff' %}" class="sidebar-brand">
+                        <img class="sidebar-brand-icon" src="{% static 'loginandregistration/assets/images/logo/igt_logo.png' %}" alt="IGT">
+                        <span><img class="brand-icon" src="{% static 'loginandregistration/assets/images/logo/igthomelogo.png' %}" width="130px" height="32px" alt="IGT"></span>
+                    </a>
+
+                    <div class="sidebar-heading">Overview</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="{% url 'dev_mng_login_staff' %}">
+                                <span class="sidebar-menu-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="{% url 'dev_mng_login_member' %}">
+                                <span class="sidebar-menu-text">Creator / Influencer</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="{% url 'dev_mng_login_member' %}">
+                                <span class="sidebar-menu-text">Brands / Advertisers</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="managedservice.html">
+                                <span class="sidebar-menu-text">Managed Service</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="{% url 'dev_mng_login_staff' %}">
+                                <span class="sidebar-menu-text">Login</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="{% url 'dev_registration' %}">
+                                <span class="sidebar-menu-text">Register</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{active.home}}">
+                            <a class="sidebar-menu-button" href="contact.html">
+                                <span class="sidebar-menu-text">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
